@@ -37,7 +37,7 @@ body {
   max-width: 100%;
   max-height: auto;
   animation-name: fade-in, fade-out;
-  animation-duration: 2s, 3s;
+  animation-duration: 2s, 4s;
   animation-timing-function: ease-in;
   animation-delay: 0s, 4.5s;
 }
@@ -54,7 +54,7 @@ body {
   max-width: 100%;
   max-height: auto;
   animation-name: fade-in, launch, fade-out;
-  animation-duration: 2s, 3s, 4s;
+  animation-duration: 2s, 3s, 5s;
   animation-timing-function: ease-in, ease-in, ease;
   animation-delay: 0s, 2s, 3s;
 }
@@ -71,6 +71,11 @@ body {
 
 @keyframes fade-out {
   0% { opacity: 1 }
-  30% { opacity: 0 }
+  40% { opacity: 0 }
   100% { opacity: 0 }
+}
+
+#home_title {
+  text-align: center;
+  margin-top: 30%;
 }
