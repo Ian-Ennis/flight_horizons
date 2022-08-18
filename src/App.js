@@ -20,7 +20,7 @@ function App() {
   setTimeout(() => {
     console.log('5 second timer is over')
     setEntry(false)
-  }, 6000)
+  }, 7000)
 
   return (
     <>
