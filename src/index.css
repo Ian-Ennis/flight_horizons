@@ -77,5 +77,7 @@ body {
 
 #home_title {
   text-align: center;
+  margin: 0 auto;
   margin-top: 30%;
+  width: 20%;
 }

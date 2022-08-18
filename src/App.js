@@ -12,9 +12,9 @@ function App() {
       setAnimate(true)
       window.sessionStorage.setItem("firstLoadDone", 1)
     } 
-    // else {
-    //   setAnimate(false)
-    // }
+    else {
+      setAnimate(false)
+    }
   })
 
   setTimeout(() => {
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-    {entry ? <Entry animate={animate}/> : <Home />}
+    {animate ? <Entry animate={animate}/> : <Home />}
     </>
   );
 }
