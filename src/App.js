@@ -1,32 +1,37 @@
-import { useEffect, useState } from 'react'
-import Entry from './Compontents/Entry';
+import { useEffect, useState } from "react";
+import Entry from "./Compontents/Entry";
 import Home from "./Compontents/Home";
 
-
 function App() {
-  const [animate, setAnimate] = useState(true)
-  const [entry, setEntry] = useState(true)
+  const [animate, setAnimate] = useState(true);
+  const [entry, setEntry] = useState(true);
+
+  // what part of this codebase would be really bad if it broke?
+  // - it would be bad if we didnt see an animation on first load
+  // - '' '' '' '' '' '' animation plays on every reload
+  // - '' '' '' '' '' '' we didn't transition to the home screen after initial animation
 
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
-      setAnimate(true)
-      window.sessionStorage.setItem("firstLoadDone", 1)
-    } 
-    else {
+
+      setTimeout(() => {
+        window.sessionStorage.setItem("firstLoadDone", 1);
+        setAnimate(false);
+      }, 7000);
+
+    } else {
       setAnimate(false)
     }
-  })
-
-  setTimeout(() => {
-    console.log('5 second timer is over')
-    setEntry(false)
-  }, 7000)
+  });
 
   return (
     <>
-    {animate ? <Entry animate={animate}/> : <Home />}
+      {animate ? <Entry /> : <Home />}
     </>
   );
 }
 
 export default App;
+
+
+

@@ -75,9 +75,24 @@ body {
   100% { opacity: 0 }
 }
 
-#home_title {
-  text-align: center;
+#home_title_container {
   margin: 0 auto;
-  margin-top: 30%;
-  width: 20%;
+  width: 25%;
+}
+
+#home_title {
+  max-width: 100%;
+}
+
+#upcoming_launches {
+  text-align: center;
+}
+
+#horizon_container {
+  width: 100%;
+  height: auto;
+}
+
+#horizon_image {
+  max-width: 100%;
 }

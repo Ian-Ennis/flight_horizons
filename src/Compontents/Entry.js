@@ -1,8 +1,7 @@
 import title from '../Images/title.png'
 import spaceship from '../Images/spaceship.png'
 
-function Entry({ animate }) {
-    console.log("animate:", animate)
+function Entry() {
 
     return (
         <div id="entry_container">
