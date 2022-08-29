@@ -1,11 +1,8 @@
 /* use of splat operator to override bootstrap's body styling */
-
 * {
   background-color: black;
   color: white;
 }
-
-
 
 #entry_container {
   margin-top: 10%;
@@ -66,16 +63,28 @@
 
 #home_title_container {
   margin: 30px auto;
-  width: 25%;
+  width: 700px;
+  /* margin-bottom: 100px; */
 }
 
 #home_title {
   max-width: 100%;
 }
 
+#launch_container {
+  display: flex;
+  flex-direction: row;
+}
+
 #launchpad_container, #carousel, #launch_description_container {
   width: 33.33%;
 }
+
+#launch_description_container {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
 
 #carousel {
   width: 30%;
@@ -86,7 +95,7 @@
   height: 1000px;
 }
 
-#launch_image_container {
+#vehicle_image_container {
   height: 250px;
   width: auto;
   display: flex;
@@ -94,7 +103,7 @@
   margin-bottom: 110px;
 }
 
-#launch_image {
+#vehicle_image {
   height: 100%;
   width: auto;
 }
@@ -103,16 +112,27 @@
   border: 1px solid gray;
 } */
 
-#launch_container {
-  display: flex;
-  flex-direction: row;
+#launchpad_container {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
+#launchpad_image {
+  width: 200px;
+}
+
+#filler_container {
+  height: 75px;
 }
 
 #horizon_container {
   width: 100%;
   height: auto;
+  text-align: center;
 }
 
 #horizon_image {
-  max-width: 100%;
+  width: 100%;
+  /* filter: blur(20px);
+  -webkit-filter: blur(20px); */
 }

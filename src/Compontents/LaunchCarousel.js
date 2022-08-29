@@ -14,13 +14,12 @@ import terran_1 from "../Images/terran_1.png"
 import super_heavy from "../Images/super_heavy.png"
 import antares from "../Images/antares.png"
 import falcon_heavy from "../Images/falcon_heavy.png"
-import { useState } from 'react'
-
 
 function LaunchCarousel({ futureLaunches, handleSelect }) {
 
   const futureLaunch = futureLaunches.map((launch) => {
     let launchImage = "";
+
     if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon 9") {
       launchImage = falcon9
     } else if (launch.provider.name === "NASA" && launch.vehicle.name === "SLS") {
@@ -50,14 +49,28 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
     } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon Heavy") {
       launchImage = falcon_heavy
     }
+
+    const unixTimestamp = launch.sort_date * 1000
+    const dateObject = new Date(unixTimestamp)
+    const launchDate = dateObject.toString();
+
+    // console.log("toDateString:", dateObject.toDateString()) 
+    // console.log("toLocaleString:", dateObject.toLocaleString()) 
+    // console.log("toLocaleDateString:", dateObject.toLocaleDateString()) 
+    // console.log("toTimeString:", dateObject.toTimeString()) 
+    // console.log("toLocaleTimeString:", dateObject.toLocaleTimeString()) 
+    // console.log("toUTCString:", dateObject.toUTCString()) 
+    // console.log("toString:", dateObject.toString()) 
+
     
     return (
       <Carousel.Item key={launch.id}>
-        <div id="launch_image_container">
-          <img id="launch_image" src={launchImage} alt="launch_vehicle" />
+        <h3 style={{ textAlign: "center", marginBottom: "20px" }}>{launchDate}</h3>
+        <div id="vehicle_image_container">
+          <img id="vehicle_image" src={launchImage} alt="launch_vehicle" />
         </div>
         <Carousel.Caption>
-          <h3>{launch.name}</h3>
+          <h5 style={{ textAlign: "center" }}>{launch.name}</h5>
         </Carousel.Caption>
       </Carousel.Item>
     );
