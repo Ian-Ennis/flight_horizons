@@ -1,21 +1,75 @@
+import { useState } from "react";
 import title from "../Images/title.png";
-import UpcomingLaunches from "./UpcomingLaunches";
+import LaunchCarousel from "./LaunchCarousel";
+import LaunchPad from "./LaunchPad";
+import LaunchDescription from "./LaunchDescription";
 import horizon from "../Images/horizon.png";
 
 function Home() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
 
   const futureLaunches = {
     valid_auth: true,
     count: 25,
     limit: 25,
-    total: 119,
+    total: 117,
     last_page: 5,
     result: [
       {
-        id: 3185,
+        id: 3187,
         cospar_id: "",
-        sort_date: "1660937040",
-        name: "Starlink-56 (4-27)",
+        sort_date: "1661924400",
+        name: "Starlink-58 (3-4)",
+        provider: { id: 1, name: "SpaceX", slug: "spacex" },
+        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
+        pad: {
+          id: 1,
+          name: "SLC-4E",
+          location: {
+            id: 60,
+            name: "Vandenberg SFB",
+            state: "CA",
+            statename: "California",
+            country: "United States",
+            slug: "vandenberg-sfb",
+          },
+        },
+        missions: [{ id: 4912, name: "Starlink-58 (3-4)", description: null }],
+        mission_description: null,
+        launch_description:
+          "A SpaceX Falcon 9 rocket will launch the Starlink-58 (3-4) mission on Wednesday, August 31, 2022 at 5:40 AM (UTC).",
+        win_open: "2022-08-31T05:40Z",
+        t0: null,
+        win_close: null,
+        est_date: { month: null, day: null, year: null, quarter: null },
+        date_str: "Aug 31",
+        tags: [
+          { id: 103, text: "B1063" },
+          { id: 92, text: "Series: SpaceX Starlink" },
+        ],
+        slug: "starlink-3-4",
+        weather_summary: "Partly Cloudy\nTemp: 56.15F\nWind: 12.8mph\n",
+        weather_temp: 56.15,
+        weather_condition: "Partly Cloudy",
+        weather_wind_mph: 12.8,
+        weather_icon: "wi-night-alt-cloudy",
+        weather_updated: "2022-08-29T12:00:36+00:00",
+        quicktext:
+          "Falcon 9 - Starlink-58 (3-4) - Wed Aug 31, 2022 05:40:00 UTC (L-1 days, 09:19:05) - https://rocketlaunch.live/launch/starlink-3-4 for info/stream",
+        media: [],
+        result: -1,
+        suborbital: false,
+        modified: "2022-08-25T20:23:42+00:00",
+      },
+      {
+        id: 3189,
+        cospar_id: "",
+        sort_date: "1662337920",
+        name: "Starlink-59 (4-20)",
         provider: { id: 1, name: "SpaceX", slug: "spacex" },
         vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
         pad: {
@@ -30,86 +84,38 @@ function Home() {
             slug: "cape-canaveral-sfs",
           },
         },
-        missions: [{ id: 4910, name: "Starlink-56 (4-27)", description: null }],
+        missions: [
+          { id: 4914, name: "Starlink-59 (4-20)", description: null },
+          { id: 4915, name: "Sherpa-LTC2", description: null },
+        ],
         mission_description: null,
         launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Starlink-56 (4-27) mission on Friday, August 19, 2022 at 7:24 PM (UTC).",
-        win_open: "2022-08-19T19:24Z",
+          "A SpaceX Falcon 9 rocket will launch the Starlink-59 (4-20) mission on Monday, September 5, 2022 at 12:32 AM (UTC).",
+        win_open: "2022-09-05T00:32Z",
         t0: null,
         win_close: null,
         est_date: { month: null, day: null, year: null, quarter: null },
-        date_str: "Aug 19",
-        tags: [
-          { id: 105, text: "B1062" },
-          { id: 92, text: "Series: SpaceX Starlink" },
-        ],
-        slug: "starlink-56-4-27",
-        weather_summary:
-          "Humid and Partly Cloudy\nTemp: 89.29F\nWind: 8.27mph\n",
-        weather_temp: 89.29,
-        weather_condition: "Humid and Partly Cloudy",
-        weather_wind_mph: 8.27,
-        weather_icon: "wi-day-cloudy",
-        weather_updated: "2022-08-18T12:00:22+00:00",
+        date_str: "Sep 05",
+        tags: [{ id: 92, text: "Series: SpaceX Starlink" }],
+        slug: "starlink-4-20",
+        weather_summary: "Humid\nTemp: 86.5F\nWind: 9.32mph\n",
+        weather_temp: 86.5,
+        weather_condition: "Humid",
+        weather_wind_mph: 9.32,
+        weather_icon: "wi-night-clear",
+        weather_updated: "2022-08-29T12:00:38+00:00",
         quicktext:
-          "Falcon 9 - Starlink-56 (4-27) - Fri Aug 19, 2022 19:24:00 UTC (L-20:53:25) - https://rocketlaunch.live/launch/starlink-56-4-27 for info/stream",
+          "Falcon 9 - Starlink-59 (4-20) - Mon Sep 05, 2022 00:32:00 UTC (L-6 days, 04:11:05) - https://rocketlaunch.live/launch/starlink-4-20 for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-15T14:17:26+00:00",
-      },
-      {
-        id: 3186,
-        cospar_id: "",
-        sort_date: "1661651520",
-        name: "Starlink-57 (4-23)",
-        provider: { id: 1, name: "SpaceX", slug: "spacex" },
-        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
-        pad: {
-          id: 2,
-          name: "LC-39A",
-          location: {
-            id: 61,
-            name: "Kennedy Space Center",
-            state: "FL",
-            statename: "Florida",
-            country: "United States",
-            slug: "kennedy-space-center",
-          },
-        },
-        missions: [{ id: 4911, name: "Starlink-57 (4-23)", description: null }],
-        mission_description: null,
-        launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Starlink-57 (4-23) mission on Sunday, August 28, 2022 at 1:52 AM (UTC).",
-        win_open: "2022-08-28T01:52Z",
-        t0: null,
-        win_close: null,
-        est_date: { month: null, day: null, year: null, quarter: null },
-        date_str: "Aug 28",
-        tags: [
-          { id: 109, text: "B1067" },
-          { id: 92, text: "Series: SpaceX Starlink" },
-        ],
-        slug: "starlink-4-23",
-        weather_summary:
-          "Humid and Mostly Cloudy\nTemp: 82.33F\nWind: 7.4mph\n",
-        weather_temp: 82.33,
-        weather_condition: "Humid and Mostly Cloudy",
-        weather_wind_mph: 7.4,
-        weather_icon: "wi-night-alt-cloudy",
-        weather_updated: "2022-08-18T12:00:22+00:00",
-        quicktext:
-          "Falcon 9 - Starlink-57 (4-23) - Sun Aug 28, 2022 01:52:00 UTC (L-9 days, 03:21:25) - https://rocketlaunch.live/launch/starlink-4-23 for info/stream",
-        media: [],
-        result: -1,
-        suborbital: false,
-        modified: "2022-08-17T12:54:42+00:00",
+        modified: "2022-08-23T13:31:42+00:00",
       },
       {
         id: 38,
         cospar_id: "",
-        sort_date: "1661776380",
-        name: "Artemis 1 (EM-1)",
+        sort_date: "1662422396",
+        name: "Artemis I (EM-1)",
         provider: { id: 2, name: "NASA", slug: "nasa" },
         vehicle: { id: 15, name: "SLS", company_id: 2, slug: "sls" },
         pad: {
@@ -127,20 +133,20 @@ function Home() {
         missions: [
           {
             id: 35,
-            name: "Artemis 1 (EM-1)",
+            name: "Artemis I (EM-1)",
             description:
-              "On its maiden flight, the Space Launch System (SLS) will send an uncrewed Orion Multi-Purpose Crew Vehicle on a four to six-week mission to the Moon and back, including 6 days in a retrograde lunar orbit.",
+              "On its debut flight, the Space Launch System (SLS) will send an uncrewed Orion Multi-Purpose Crew Vehicle on a four to six-week mission to the Moon and back, including 6 days in a retrograde lunar orbit.",
           },
         ],
         mission_description:
-          "On its maiden flight, the Space Launch System (SLS) will send an uncrewed Orion Multi-Purpose Crew Vehicle on a four to six-week mission to the Moon and back, including 6 days in a retrograde lunar orbit.",
+          "On its debut flight, the Space Launch System (SLS) will send an uncrewed Orion Multi-Purpose Crew Vehicle on a four to six-week mission to the Moon and back, including 6 days in a retrograde lunar orbit.",
         launch_description:
-          "A NASA SLS rocket will launch the Artemis 1 (EM-1) mission on Monday, August 29, 2022 at 12:33 PM (UTC).",
-        win_open: "2022-08-29T12:33Z",
+          "A NASA SLS rocket will launch the Artemis I (EM-1) mission. The launch date is currently targeted for September 05, 2022 (UTC).",
+        win_open: null,
         t0: null,
-        win_close: "2022-08-29T14:33Z",
-        est_date: { month: null, day: null, year: null, quarter: null },
-        date_str: "Aug 29",
+        win_close: null,
+        est_date: { month: 9, day: 5, year: 2022, quarter: null },
+        date_str: "Sep 05",
         tags: [
           { id: 48, text: "Lunar Orbit" },
           { id: 91, text: "Series: NASA Artemis" },
@@ -150,14 +156,14 @@ function Home() {
         ],
         slug: "em-1",
         weather_summary:
-          "Humid and Partly Cloudy\nTemp: 77.67F\nWind: 4.92mph\n",
-        weather_temp: 77.67,
-        weather_condition: "Humid and Partly Cloudy",
-        weather_wind_mph: 4.92,
+          "Humid and Mostly Cloudy\nTemp: 78.9F\nWind: 4.43mph\n",
+        weather_temp: 78.9,
+        weather_condition: "Humid and Mostly Cloudy",
+        weather_wind_mph: 4.43,
         weather_icon: "wi-day-cloudy",
-        weather_updated: "2022-08-18T12:00:23+00:00",
+        weather_updated: "2022-08-29T12:00:36+00:00",
         quicktext:
-          "SLS - Artemis 1 (EM-1) - Mon Aug 29, 2022 12:33:00 UTC (L-10 days, 14:02:25) - https://rocketlaunch.live/launch/em-1 for info/stream",
+          "SLS - Artemis I (EM-1) - Sep 05 (estimated) - https://rocketlaunch.live/launch/em-1 for info/stream",
         media: [
           {
             id: 1079,
@@ -167,15 +173,31 @@ function Home() {
             ldfeatured: true,
             approved: true,
           },
+          {
+            id: 1083,
+            media_url: "",
+            youtube_vidid: "Y9x-QkWCzrc",
+            featured: true,
+            ldfeatured: true,
+            approved: true,
+          },
+          {
+            id: 1082,
+            media_url: "",
+            youtube_vidid: "0_vyZiVxEEo",
+            featured: true,
+            ldfeatured: true,
+            approved: true,
+          },
         ],
         result: -1,
         suborbital: false,
-        modified: "2022-08-16T13:13:30+00:00",
+        modified: "2022-08-29T14:25:29+00:00",
       },
       {
         id: 2699,
         cospar_id: "",
-        sort_date: "1661817596",
+        sort_date: "1662508796",
         name: "RS1 Flight 1",
         provider: { id: 142, name: "ABL Space", slug: "abl-space" },
         vehicle: { id: 121, name: "RS1", company_id: 142, slug: "rs1" },
@@ -194,12 +216,12 @@ function Home() {
         missions: [{ id: 4199, name: "RS1 Flight 1", description: null }],
         mission_description: null,
         launch_description:
-          "An ABL Space RS1 rocket will launch the RS1 Flight 1 mission. The launch date is currently targeted for August 29, 2022 (UTC).",
+          "An ABL Space RS1 rocket will launch the RS1 Flight 1 mission. The launch date is currently targeted for September 06, 2022 (UTC).",
         win_open: null,
         t0: null,
         win_close: null,
-        est_date: { month: 8, day: 29, year: 2022, quarter: null },
-        date_str: "Aug 29",
+        est_date: { month: 9, day: 6, year: 2022, quarter: null },
+        date_str: "Sep 06",
         tags: [
           { id: 23, text: "Test Flight" },
           { id: 14, text: "Vehicle Debut" },
@@ -212,54 +234,11 @@ function Home() {
         weather_icon: null,
         weather_updated: null,
         quicktext:
-          "RS1 - RS1 Flight 1 - Aug 29 (estimated) - https://rocketlaunch.live/launch/rs1-flight-1 for info/stream",
+          "RS1 - RS1 Flight 1 - Sep 06 (estimated) - https://rocketlaunch.live/launch/rs1-flight-1 for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-12T02:27:10+00:00",
-      },
-      {
-        id: 3187,
-        cospar_id: "",
-        sort_date: "1661990397",
-        name: "Starlink (3-4)",
-        provider: { id: 1, name: "SpaceX", slug: "spacex" },
-        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
-        pad: {
-          id: 1,
-          name: "SLC-4E",
-          location: {
-            id: 60,
-            name: "Vandenberg SFB",
-            state: "CA",
-            statename: "California",
-            country: "United States",
-            slug: "vandenberg-sfb",
-          },
-        },
-        missions: [{ id: 4912, name: "Starlink (3-4)", description: null }],
-        mission_description: null,
-        launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Starlink (3-4) mission. The launch date is currently targeted for August, 2022 (UTC).",
-        win_open: null,
-        t0: null,
-        win_close: null,
-        est_date: { month: 8, day: null, year: 2022, quarter: null },
-        date_str: "Aug 2022",
-        tags: [{ id: 92, text: "Series: SpaceX Starlink" }],
-        slug: "starlink-3-4",
-        weather_summary: null,
-        weather_temp: null,
-        weather_condition: null,
-        weather_wind_mph: null,
-        weather_icon: null,
-        weather_updated: null,
-        quicktext:
-          "Falcon 9 - Starlink (3-4) - Aug 2022 (estimated) - https://rocketlaunch.live/launch/starlink-3-4 for info/stream",
-        media: [],
-        result: -1,
-        suborbital: false,
-        modified: "2022-08-12T02:18:15+00:00",
+        modified: "2022-08-19T14:47:11+00:00",
       },
       {
         id: 3190,
@@ -307,9 +286,55 @@ function Home() {
         modified: "2022-08-16T12:56:57+00:00",
       },
       {
+        id: 3191,
+        cospar_id: "",
+        sort_date: "1662595196",
+        name: "Starlink (4-2)",
+        provider: { id: 1, name: "SpaceX", slug: "spacex" },
+        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
+        pad: {
+          id: 2,
+          name: "LC-39A",
+          location: {
+            id: 61,
+            name: "Kennedy Space Center",
+            state: "FL",
+            statename: "Florida",
+            country: "United States",
+            slug: "kennedy-space-center",
+          },
+        },
+        missions: [
+          { id: 4917, name: "Starlink (4-2)", description: null },
+          { id: 4918, name: "BlueWalker-3", description: null },
+        ],
+        mission_description: null,
+        launch_description:
+          "A SpaceX Falcon 9 rocket will launch the Starlink (4-2) mission. The launch date is currently targeted for September 07, 2022 (UTC).",
+        win_open: null,
+        t0: null,
+        win_close: null,
+        est_date: { month: 9, day: 7, year: 2022, quarter: null },
+        date_str: "Sep 07",
+        tags: [{ id: 92, text: "Series: SpaceX Starlink" }],
+        slug: "starlink-4-2",
+        weather_summary: null,
+        weather_temp: null,
+        weather_condition: null,
+        weather_wind_mph: null,
+        weather_icon: null,
+        weather_updated: null,
+        quicktext:
+          "Falcon 9 - Starlink (4-2) - Sep 07 (estimated) - https://rocketlaunch.live/launch/starlink-4-2 for info/stream",
+        media: [],
+        result: -1,
+        suborbital: false,
+        modified: "2022-08-19T14:47:58+00:00",
+      },
+      {
         id: 2967,
         cospar_id: "",
-        sort_date: "1662940796",
+        sort_date: "1662933600",
         name: '"To the Black"',
         provider: { id: 91, name: "Firefly", slug: "firefly" },
         vehicle: { id: 58, name: "Alpha", company_id: 91, slug: "alpha" },
@@ -328,73 +353,26 @@ function Home() {
         missions: [{ id: 4606, name: "Alpha Flight 2", description: null }],
         mission_description: null,
         launch_description:
-          'A Firefly Alpha rocket will launch the "To the Black" mission. The launch date is currently targeted for September 11, 2022 (UTC).',
-        win_open: null,
+          'A Firefly Alpha rocket will launch the "To the Black" mission on Sunday, September 11, 2022 at 10:00 PM (UTC).',
+        win_open: "2022-09-11T22:00Z",
         t0: null,
         win_close: null,
-        est_date: { month: 9, day: 11, year: 2022, quarter: null },
+        est_date: { month: null, day: null, year: null, quarter: null },
         date_str: "Sep 11",
         tags: [{ id: 23, text: "Test Flight" }],
         slug: "alpha-flight-2",
-        weather_summary: null,
-        weather_temp: null,
-        weather_condition: null,
-        weather_wind_mph: null,
-        weather_icon: null,
-        weather_updated: null,
+        weather_summary: "Partly Cloudy\nTemp: 64.73F\nWind: 14.39mph\n",
+        weather_temp: 64.73,
+        weather_condition: "Partly Cloudy",
+        weather_wind_mph: 14.39,
+        weather_icon: "wi-day-cloudy",
+        weather_updated: "2022-08-29T12:00:38+00:00",
         quicktext:
-          'Alpha - "To the Black" - Sep 11 (estimated) - https://rocketlaunch.live/launch/alpha-flight-2 for info/stream',
+          'Alpha - "To the Black" - Sun Sep 11, 2022 22:00:00 UTC (L-13 days, 01:39:05) - https://rocketlaunch.live/launch/alpha-flight-2 for info/stream',
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-09T15:40:16+00:00",
-      },
-      {
-        id: 2969,
-        cospar_id: "",
-        sort_date: "1663286396",
-        name: "SES-20 & SES-21",
-        provider: {
-          id: 3,
-          name: "United Launch Alliance (ULA)",
-          slug: "united-launch-alliance-ula",
-        },
-        vehicle: { id: 3, name: "Atlas V", company_id: 3, slug: "atlas-v" },
-        pad: {
-          id: 4,
-          name: "SLC-41",
-          location: {
-            id: 62,
-            name: "Cape Canaveral SFS",
-            state: "FL",
-            statename: "Florida",
-            country: "United States",
-            slug: "cape-canaveral-sfs",
-          },
-        },
-        missions: [{ id: 4608, name: "SES-20 & SES-21", description: null }],
-        mission_description: null,
-        launch_description:
-          "A United Launch Alliance (ULA) Atlas V rocket will launch the SES-20 & SES-21 mission. The launch date is currently targeted for September 15, 2022 (UTC).",
-        win_open: null,
-        t0: null,
-        win_close: null,
-        est_date: { month: 9, day: 15, year: 2022, quarter: null },
-        date_str: "Sep 15",
-        tags: [],
-        slug: "ses-20-ses-21",
-        weather_summary: null,
-        weather_temp: null,
-        weather_condition: null,
-        weather_wind_mph: null,
-        weather_icon: null,
-        weather_updated: null,
-        quicktext:
-          "Atlas V - SES-20 & SES-21 - Sep 15 (estimated) - https://rocketlaunch.live/launch/ses-20-ses-21 for info/stream",
-        media: [],
-        result: -1,
-        suborbital: false,
-        modified: "2022-08-09T12:56:52+00:00",
+        modified: "2022-08-22T15:12:58+00:00",
       },
       {
         id: 2752,
@@ -443,55 +421,9 @@ function Home() {
         modified: "2022-01-06T03:49:03+00:00",
       },
       {
-        id: 3108,
-        cospar_id: "",
-        sort_date: "1664495996",
-        name: "Crew-5",
-        provider: { id: 1, name: "SpaceX", slug: "spacex" },
-        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
-        pad: {
-          id: 2,
-          name: "LC-39A",
-          location: {
-            id: 61,
-            name: "Kennedy Space Center",
-            state: "FL",
-            statename: "Florida",
-            country: "United States",
-            slug: "kennedy-space-center",
-          },
-        },
-        missions: [{ id: 4803, name: "Crew-5", description: null }],
-        mission_description: null,
-        launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Crew-5 mission. The launch date is currently targeted for September 29, 2022 (UTC).",
-        win_open: null,
-        t0: null,
-        win_close: null,
-        est_date: { month: 9, day: 29, year: 2022, quarter: null },
-        date_str: "Sep 29",
-        tags: [
-          { id: 9, text: "Crewed" },
-          { id: 22, text: "NASA Commercial Crew Program (CCP)" },
-        ],
-        slug: "crew-5",
-        weather_summary: null,
-        weather_temp: null,
-        weather_condition: null,
-        weather_wind_mph: null,
-        weather_icon: null,
-        weather_updated: null,
-        quicktext:
-          "Falcon 9 - Crew-5 - Sep 29 (estimated) - https://rocketlaunch.live/launch/crew-5 for info/stream",
-        media: [],
-        result: -1,
-        suborbital: false,
-        modified: "2022-07-21T20:58:51+00:00",
-      },
-      {
         id: 221,
         cospar_id: "",
-        sort_date: "1664582397",
+        sort_date: "1664063996",
         name: "NROL-91",
         provider: {
           id: 3,
@@ -519,12 +451,12 @@ function Home() {
         missions: [{ id: 213, name: "NROL-91", description: null }],
         mission_description: null,
         launch_description:
-          "A United Launch Alliance (ULA) Delta IV Heavy rocket will launch the NROL-91 mission. The launch date is currently targeted for September, 2022 (UTC).",
+          "A United Launch Alliance (ULA) Delta IV Heavy rocket will launch the NROL-91 mission. The launch date is currently targeted for September 24, 2022 (UTC).",
         win_open: null,
         t0: null,
         win_close: null,
-        est_date: { month: 9, day: null, year: 2022, quarter: null },
-        date_str: "Sep 2022",
+        est_date: { month: 9, day: 24, year: 2022, quarter: null },
+        date_str: "Sep 24",
         tags: [{ id: 8, text: "Classified Payload" }],
         slug: "nrol-91",
         weather_summary: null,
@@ -534,11 +466,11 @@ function Home() {
         weather_icon: null,
         weather_updated: null,
         quicktext:
-          "Delta IV Heavy - NROL-91 - Sep 2022 (estimated) - https://rocketlaunch.live/launch/nrol-91 for info/stream",
+          "Delta IV Heavy - NROL-91 - Sep 24 (estimated) - https://rocketlaunch.live/launch/nrol-91 for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-16T10:05:59+00:00",
+        modified: "2022-08-24T20:56:24+00:00",
       },
       {
         id: 228,
@@ -584,15 +516,19 @@ function Home() {
         modified: "2022-08-05T17:45:44+00:00",
       },
       {
-        id: 3189,
+        id: 2969,
         cospar_id: "",
         sort_date: "1664582397",
-        name: "Starlink (4-20)",
-        provider: { id: 1, name: "SpaceX", slug: "spacex" },
-        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
-        pad: {
+        name: "SES-20 & SES-21",
+        provider: {
           id: 3,
-          name: "SLC-40",
+          name: "United Launch Alliance (ULA)",
+          slug: "united-launch-alliance-ula",
+        },
+        vehicle: { id: 3, name: "Atlas V", company_id: 3, slug: "atlas-v" },
+        pad: {
+          id: 4,
+          name: "SLC-41",
           location: {
             id: 62,
             name: "Cape Canaveral SFS",
@@ -602,20 +538,17 @@ function Home() {
             slug: "cape-canaveral-sfs",
           },
         },
-        missions: [
-          { id: 4914, name: "Starlink (4-20)", description: null },
-          { id: 4915, name: "Sherpa-LTC2", description: null },
-        ],
+        missions: [{ id: 4608, name: "SES-20 & SES-21", description: null }],
         mission_description: null,
         launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Starlink (4-20) mission. The launch date is currently targeted for September, 2022 (UTC).",
+          "A United Launch Alliance (ULA) Atlas V rocket will launch the SES-20 & SES-21 mission. The launch date is currently targeted for September, 2022 (UTC).",
         win_open: null,
         t0: null,
         win_close: null,
         est_date: { month: 9, day: null, year: 2022, quarter: null },
         date_str: "Sep 2022",
-        tags: [{ id: 92, text: "Series: SpaceX Starlink" }],
-        slug: "starlink-4-20",
+        tags: [],
+        slug: "ses-20-ses-21",
         weather_summary: null,
         weather_temp: null,
         weather_condition: null,
@@ -623,57 +556,11 @@ function Home() {
         weather_icon: null,
         weather_updated: null,
         quicktext:
-          "Falcon 9 - Starlink (4-20) - Sep 2022 (estimated) - https://rocketlaunch.live/launch/starlink-4-20 for info/stream",
+          "Atlas V - SES-20 & SES-21 - Sep 2022 (estimated) - https://rocketlaunch.live/launch/ses-20-ses-21 for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-16T12:56:18+00:00",
-      },
-      {
-        id: 3191,
-        cospar_id: "",
-        sort_date: "1664582397",
-        name: "Starlink (4-2)",
-        provider: { id: 1, name: "SpaceX", slug: "spacex" },
-        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
-        pad: {
-          id: 2,
-          name: "LC-39A",
-          location: {
-            id: 61,
-            name: "Kennedy Space Center",
-            state: "FL",
-            statename: "Florida",
-            country: "United States",
-            slug: "kennedy-space-center",
-          },
-        },
-        missions: [
-          { id: 4917, name: "Starlink (4-2)", description: null },
-          { id: 4918, name: "BlueWalker-3", description: null },
-        ],
-        mission_description: null,
-        launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Starlink (4-2) mission. The launch date is currently targeted for September, 2022 (UTC).",
-        win_open: null,
-        t0: null,
-        win_close: null,
-        est_date: { month: 9, day: null, year: 2022, quarter: null },
-        date_str: "Sep 2022",
-        tags: [{ id: 92, text: "Series: SpaceX Starlink" }],
-        slug: "starlink-4-2",
-        weather_summary: null,
-        weather_temp: null,
-        weather_condition: null,
-        weather_wind_mph: null,
-        weather_icon: null,
-        weather_updated: null,
-        quicktext:
-          "Falcon 9 - Starlink (4-2) - Sep 2022 (estimated) - https://rocketlaunch.live/launch/starlink-4-2 for info/stream",
-        media: [],
-        result: -1,
-        suborbital: false,
-        modified: "2022-08-16T12:57:53+00:00",
+        modified: "2022-08-22T12:23:25+00:00",
       },
       {
         id: 3188,
@@ -681,12 +568,7 @@ function Home() {
         sort_date: "1664582397",
         name: '"The Owl Spreads Its Wings"',
         provider: { id: 26, name: "Rocket Lab", slug: "rocket-lab" },
-        vehicle: {
-          id: 18,
-          name: "Electron",
-          company_id: 26,
-          slug: "electron",
-        },
+        vehicle: { id: 18, name: "Electron", company_id: 26, slug: "electron" },
         pad: {
           id: 19,
           name: "LC-1A",
@@ -833,6 +715,52 @@ function Home() {
         result: -1,
         suborbital: false,
         modified: "2022-06-28T14:22:34+00:00",
+      },
+      {
+        id: 3108,
+        cospar_id: "",
+        sort_date: "1664841596",
+        name: "Crew-5",
+        provider: { id: 1, name: "SpaceX", slug: "spacex" },
+        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
+        pad: {
+          id: 2,
+          name: "LC-39A",
+          location: {
+            id: 61,
+            name: "Kennedy Space Center",
+            state: "FL",
+            statename: "Florida",
+            country: "United States",
+            slug: "kennedy-space-center",
+          },
+        },
+        missions: [{ id: 4803, name: "Crew-5", description: null }],
+        mission_description: null,
+        launch_description:
+          "A SpaceX Falcon 9 rocket will launch the Crew-5 mission. The launch date is currently targeted for October 03, 2022 (UTC).",
+        win_open: null,
+        t0: null,
+        win_close: null,
+        est_date: { month: 10, day: 3, year: 2022, quarter: null },
+        date_str: "Oct 03",
+        tags: [
+          { id: 9, text: "Crewed" },
+          { id: 22, text: "NASA Commercial Crew Program (CCP)" },
+        ],
+        slug: "crew-5",
+        weather_summary: null,
+        weather_temp: null,
+        weather_condition: null,
+        weather_wind_mph: null,
+        weather_icon: null,
+        weather_updated: null,
+        quicktext:
+          "Falcon 9 - Crew-5 - Oct 03 (estimated) - https://rocketlaunch.live/launch/crew-5 for info/stream",
+        media: [],
+        result: -1,
+        suborbital: false,
+        modified: "2022-08-26T02:22:42+00:00",
       },
       {
         id: 2822,
@@ -1066,35 +994,35 @@ function Home() {
         modified: "2022-08-05T20:14:20+00:00",
       },
       {
-        id: 404,
+        id: 3172,
         cospar_id: "",
-        sort_date: "1668556796",
-        name: "SWOT",
+        sort_date: "1667865596",
+        name: "Transporter-6",
         provider: { id: 1, name: "SpaceX", slug: "spacex" },
         vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
         pad: {
-          id: 1,
-          name: "SLC-4E",
+          id: 3,
+          name: "SLC-40",
           location: {
-            id: 60,
-            name: "Vandenberg SFB",
-            state: "CA",
-            statename: "California",
+            id: 62,
+            name: "Cape Canaveral SFS",
+            state: "FL",
+            statename: "Florida",
             country: "United States",
-            slug: "vandenberg-sfb",
+            slug: "cape-canaveral-sfs",
           },
         },
-        missions: [{ id: 392, name: "SWOT", description: null }],
+        missions: [{ id: 4898, name: "Transporter-6", description: null }],
         mission_description: null,
         launch_description:
-          "A SpaceX Falcon 9 rocket will launch the SWOT mission. The launch date is currently targeted for November 15, 2022 (UTC).",
+          "A SpaceX Falcon 9 rocket will launch the Transporter-6 mission. The launch date is currently targeted for November 07, 2022 (UTC).",
         win_open: null,
         t0: null,
         win_close: null,
-        est_date: { month: 11, day: 15, year: 2022, quarter: null },
-        date_str: "Nov 15",
-        tags: [{ id: 25, text: "Earth Observation Satellite" }],
-        slug: "swot",
+        est_date: { month: 11, day: 7, year: 2022, quarter: null },
+        date_str: "Nov 07",
+        tags: [],
+        slug: "transporter-6",
         weather_summary: null,
         weather_temp: null,
         weather_condition: null,
@@ -1102,11 +1030,11 @@ function Home() {
         weather_icon: null,
         weather_updated: null,
         quicktext:
-          "Falcon 9 - SWOT - Nov 15 (estimated) - https://rocketlaunch.live/launch/swot for info/stream",
+          "Falcon 9 - Transporter-6 - Nov 07 (estimated) - https://rocketlaunch.live/launch/transporter-6 for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-03-25T22:51:49+00:00",
+        modified: "2022-08-19T17:33:55+00:00",
       },
       {
         id: 1208,
@@ -1157,35 +1085,35 @@ function Home() {
         modified: "2022-08-05T20:16:57+00:00",
       },
       {
-        id: 3172,
+        id: 404,
         cospar_id: "",
-        sort_date: "1669852797",
-        name: "Transporter-6",
+        sort_date: "1670284796",
+        name: "SWOT",
         provider: { id: 1, name: "SpaceX", slug: "spacex" },
         vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
         pad: {
-          id: 55,
-          name: "Pad TBD",
+          id: 1,
+          name: "SLC-4E",
           location: {
-            id: 68,
-            name: "United States TBD",
-            state: null,
-            statename: null,
+            id: 60,
+            name: "Vandenberg SFB",
+            state: "CA",
+            statename: "California",
             country: "United States",
-            slug: "united-states-tbd",
+            slug: "vandenberg-sfb",
           },
         },
-        missions: [{ id: 4898, name: "Transporter-6", description: null }],
+        missions: [{ id: 392, name: "SWOT", description: null }],
         mission_description: null,
         launch_description:
-          "A SpaceX Falcon 9 rocket will launch the Transporter-6 mission. The launch date is currently targeted for November, 2022 (UTC).",
+          "A SpaceX Falcon 9 rocket will launch the SWOT mission. The launch date is currently targeted for December 05, 2022 (UTC).",
         win_open: null,
         t0: null,
         win_close: null,
-        est_date: { month: 11, day: null, year: 2022, quarter: null },
-        date_str: "Nov 2022",
-        tags: [],
-        slug: "transporter-6",
+        est_date: { month: 12, day: 5, year: 2022, quarter: null },
+        date_str: "Dec 05",
+        tags: [{ id: 25, text: "Earth Observation Satellite" }],
+        slug: "swot",
         weather_summary: null,
         weather_temp: null,
         weather_condition: null,
@@ -1193,21 +1121,152 @@ function Home() {
         weather_icon: null,
         weather_updated: null,
         quicktext:
-          "Falcon 9 - Transporter-6 - Nov 2022 (estimated) - https://rocketlaunch.live/launch/transporter-6 for info/stream",
+          "Falcon 9 - SWOT - Dec 05 (estimated) - https://rocketlaunch.live/launch/swot for info/stream",
         media: [],
         result: -1,
         suborbital: false,
-        modified: "2022-08-05T19:59:52+00:00",
+        modified: "2022-08-26T16:41:41+00:00",
+      },
+      {
+        id: 465,
+        cospar_id: "",
+        sort_date: "1672531197",
+        name: "USSF-44",
+        provider: { id: 1, name: "SpaceX", slug: "spacex" },
+        vehicle: {
+          id: 7,
+          name: "Falcon Heavy",
+          company_id: 1,
+          slug: "falcon-heavy",
+        },
+        pad: {
+          id: 2,
+          name: "LC-39A",
+          location: {
+            id: 61,
+            name: "Kennedy Space Center",
+            state: "FL",
+            statename: "Florida",
+            country: "United States",
+            slug: "kennedy-space-center",
+          },
+        },
+        missions: [{ id: 448, name: "USSF-44", description: null }],
+        mission_description: null,
+        launch_description:
+          "A SpaceX Falcon Heavy rocket will launch the USSF-44 mission. The launch date is currently targeted for December, 2022 (UTC).",
+        win_open: null,
+        t0: null,
+        win_close: null,
+        est_date: { month: 12, day: null, year: 2022, quarter: null },
+        date_str: "Dec 2022",
+        tags: [],
+        slug: "afspc-44",
+        weather_summary: null,
+        weather_temp: null,
+        weather_condition: null,
+        weather_wind_mph: null,
+        weather_icon: null,
+        weather_updated: null,
+        quicktext:
+          "Falcon Heavy - USSF-44 - Dec 2022 (estimated) - https://rocketlaunch.live/launch/afspc-44 for info/stream",
+        media: [],
+        result: -1,
+        suborbital: false,
+        modified: "2022-06-28T14:21:13+00:00",
+      },
+      {
+        id: 600,
+        cospar_id: null,
+        sort_date: "1672531197",
+        name: "PACE",
+        provider: { id: 1, name: "SpaceX", slug: "spacex" },
+        vehicle: { id: 1, name: "Falcon 9", company_id: 1, slug: "falcon-9" },
+        pad: {
+          id: 3,
+          name: "SLC-40",
+          location: {
+            id: 62,
+            name: "Cape Canaveral SFS",
+            state: "FL",
+            statename: "Florida",
+            country: "United States",
+            slug: "cape-canaveral-sfs",
+          },
+        },
+        missions: [{ id: 626, name: "PACE", description: null }],
+        mission_description: null,
+        launch_description:
+          "A SpaceX Falcon 9 rocket will launch the PACE mission. The launch date is currently targeted for December, 2022 (UTC).",
+        win_open: null,
+        t0: null,
+        win_close: null,
+        est_date: { month: 12, day: null, year: 2022, quarter: null },
+        date_str: "Dec 2022",
+        tags: [],
+        slug: "pace",
+        weather_summary: null,
+        weather_temp: null,
+        weather_condition: null,
+        weather_wind_mph: null,
+        weather_icon: null,
+        weather_updated: null,
+        quicktext:
+          "Falcon 9 - PACE - Dec 2022 (estimated) - https://rocketlaunch.live/launch/pace for info/stream",
+        media: [],
+        result: -1,
+        suborbital: false,
+        modified: "2020-02-04T22:48:59+00:00",
       },
     ],
   };
+
+  /* 
+  name: The name of the launch, generally derived from the primary mission's name
+
+  provider: An object with launch provider information
+
+  vehicle: An object with launch vehicle information
+
+  pad: An object with launch pad information
+    pad.location.name: A string with the launch pad location
+    pad.name: A string with the specific launch pad id
+    pad.location.state: A string with the state the launch is in
+
+  missions: An array of objects with mission information
+    missions.name: name of the mission
+  launch_description: bare bones details of the launch
+  mission_description: more in-depth description of the mission (sometimes null)
+  win_open: time the launch window opens
+  weather_summary: the weather for the launch window
+  media[0].youtube_vidid: the id of the youtube video?
+  */
+
+  // launch info (company, mission, date, etc)
+  // pad info
+  // weather
+  // media if there
 
   return (
     <>
       <div id="home_title_container">
         <img id="home_title" src={title} alt="flight_horizons" />
       </div>
-      <UpcomingLaunches />
+
+      <div id="launch_container">
+        <LaunchPad futureLaunches={futureLaunches.result} index={index} />
+
+        <LaunchCarousel
+          futureLaunches={futureLaunches.result}
+          handleSelect={handleSelect}
+        />
+
+        <LaunchDescription
+          futureLaunches={futureLaunches.result}
+          index={index}
+        />
+      </div>
+
       <div id="horizon_container">
         <img id="horizon_image" src={horizon} alt="image_of_horizon" />
       </div>
