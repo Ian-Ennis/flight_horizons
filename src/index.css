@@ -5,14 +5,16 @@
 }
 
 #entry_container {
-  margin-top: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  /* margin-top: 10%; */
+  /* display: inline; */
+  /* display: flex; */
+  /* flex-direction: row;
+  justify-content: center; */
 }
 
 #entry_title_container {
-  position: relative;
+  display: inline-block;
+  /* position: relative; */
   width: 30%;
   height: auto;
 }
@@ -29,6 +31,7 @@
 }
 
 #entry_visual_container {
+  display: inline-block;
   width: 10%;
   height: auto;
   display: flex;
