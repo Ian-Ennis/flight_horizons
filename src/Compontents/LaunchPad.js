@@ -46,8 +46,8 @@ function LaunchPad({ futureLaunches, index }) {
     <div id="launchpad_container">
       <p>Launch Pad: {futureLaunches[index].pad.name}</p>
       <p>Facility: {futureLaunches[index].pad.location.name}</p>
-      {futureLaunches[index].pad.location.state ? <p>State: {futureLaunches[index].pad.location.state}</p> : null}
-      {futureLaunches[index].pad.location.country ? <p>Country: {futureLaunches[index].pad.location.country}</p> : null}
+      {(futureLaunches[index].pad.location.country && futureLaunches[index].pad.location.state) ? <p>{futureLaunches[index].pad.location.country} ({futureLaunches[index].pad.location.state})</p> : null}
+      {(futureLaunches[index].pad.location.country && !futureLaunches[index].pad.location.state) ? <p>{futureLaunches[index].pad.location.country}</p> : null}
       {padImage.length ? <img id="launchpad_image" src={padImage} alt="launchpad_image"/> : null}
     </div>
   )

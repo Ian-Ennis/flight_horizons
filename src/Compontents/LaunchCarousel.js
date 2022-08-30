@@ -52,7 +52,10 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
 
     const unixTimestamp = launch.sort_date * 1000
     const dateObject = new Date(unixTimestamp)
-    const launchDate = dateObject.toString();
+    const launchDay = dateObject.toLocaleString("en-US", {weekday: "long"})
+    const launchMonth = dateObject.toLocaleString("en-US", {month: "long"})
+    const launchDate = dateObject.toLocaleString("en-US", {day: "numeric"})
+    const launchTime = dateObject.toLocaleTimeString();
 
     // console.log("toDateString:", dateObject.toDateString()) 
     // console.log("toLocaleString:", dateObject.toLocaleString()) 
@@ -65,12 +68,13 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
     
     return (
       <Carousel.Item key={launch.id}>
-        <h3 style={{ textAlign: "center", marginBottom: "20px" }}>{launchDate}</h3>
+        <p style={{ textAlign: "center", fontSize: 24, marginBottom: "20px" }}>{launchDay}, {launchMonth} {launchDate}, {launchTime} (Mountain)</p>
+        {/* <p style={{ textAlign: "center", fontSize: 24, marginBottom: "20px" }}>{launchTime} mountain</p> */}
         <div id="vehicle_image_container">
           <img id="vehicle_image" src={launchImage} alt="launch_vehicle" />
         </div>
         <Carousel.Caption>
-          <h5 style={{ textAlign: "center" }}>{launch.name}</h5>
+          <h5 style={{ textAlign: "center" }}>{launch.vehicle.name}</h5>
         </Carousel.Caption>
       </Carousel.Item>
     );

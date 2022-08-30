@@ -1250,26 +1250,25 @@ function Home() {
   return (
     <>
       <div id="home_title_container">
+        {/* <p style={{ textAlign: "center", fontSize: 72 }}>flight horizons</p> */}
         <img id="home_title" src={title} alt="flight_horizons" />
       </div>
 
       <div id="launch_container">
-        <LaunchDescription
-          futureLaunches={futureLaunches.result}
-          index={index}
-        />
-
+        <LaunchPad futureLaunches={futureLaunches.result} index={index} />
+        
         <LaunchCarousel
           futureLaunches={futureLaunches.result}
           handleSelect={handleSelect}
         />
 
-        <LaunchPad futureLaunches={futureLaunches.result} index={index} />
+        <LaunchDescription
+          futureLaunches={futureLaunches.result}
+          index={index}
+        />
       </div>
 
-      <div id="filler_container">
-
-      </div>
+      <div id="filler_container"></div>
 
       <div id="horizon_container">
         <img id="horizon_image" src={horizon} alt="image_of_horizon" />

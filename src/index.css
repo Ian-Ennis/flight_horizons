@@ -1,7 +1,28 @@
 /* use of splat operator to override bootstrap's body styling */
 * {
   background-color: black;
-  color: white;
+  color: rgb(235, 235, 235);
+  /* text-transform: lowercase; */
+  /* font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif; */
+  font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+  /* font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif; */
+  /* font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif; */
+  /* font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; */
+  /* font-family: Georgia, Times, Times New Roman, serif; */
+  /* font-family: Lucida Bright, Georgia, serif; */
+  /* font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif; */
+  /* font-family: Perpetua, Baskerville, Big Caslon, Palatino Linotype, Palatino, serif; */
+  /* font-family: Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif; */
+  /* font-family: "Open Sans", Arial, sans-serif; */
+  /* font-family: Arial, Baskerville, monospace; */
+  /* font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif; */
+  /* font-family: */
+  /* font-family: */
+  /* font-family: */
+  /* font-family: */
+  /* font-family: */
+  /* font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; */
 }
 
 #entry_container {
@@ -26,7 +47,7 @@
   bottom: 11%;
   max-width: 100%;
   max-height: auto;
-  animation-name: fade-in, fade-out;
+  animation-name: entry-fade-in, entry-fade-out;
   animation-duration: 2s, 4s;
   animation-timing-function: ease-in;
   animation-delay: 0s, 4.5s;
@@ -40,13 +61,13 @@
 
 #entry_visual_animated {
   max-width: 100%;
-  animation-name: fade-in, launch, fade-out;
+  animation-name: entry-fade-in, launch, entry-fade-out;
   animation-duration: 2s, 3s, 5s;
   animation-timing-function: ease-in, ease-in, ease;
   animation-delay: 0s, 2s, 3s;
 }
 
-@keyframes fade-in {
+@keyframes entry-fade-in {
   0% { opacity: 0 }
   100% { opacity: 1 }
 }
@@ -56,24 +77,41 @@
   to { transform: translateY(-150%) }
 }
 
-@keyframes fade-out {
+@keyframes entry-fade-out {
   0% { opacity: 1 }
   40% { opacity: 0 }
   100% { opacity: 0 }
 }
 
 #home_title_container {
-  margin: 30px auto;
+  margin: 2.5% auto;
   width: 700px;
+  animation: suspend-title;
+  animation-timing-function: ease-in;
+  animation-duration: 5.5s;
 }
 
 #home_title {
   max-width: 100%;
 }
 
+@keyframes suspend-title {
+  0% { opacity: 0 }
+  20% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
 #launch_container {
   display: flex;
   flex-direction: row;
+  animation: suspend;
+  animation-duration: 8s;
+}
+
+@keyframes suspend {
+  0% { opacity: 0 }
+  50% { opacity: 0}
+  100% { opacity: 1 }
 }
 
 #launchpad_container, #carousel, #launch_description_container {
@@ -81,10 +119,9 @@
 }
 
 #launch_description_container {
-  margin-top: 10%;
-  margin-left: 5%;
+  text-align: right;
+  margin: 7% 5% 0 0;
 }
-
 
 #carousel {
   width: 30%;
@@ -100,6 +137,7 @@
   width: auto;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
   margin-bottom: 110px;
 }
 
@@ -109,24 +147,52 @@
 }
 
 #launchpad_container {
-  margin-top: 10%;
-  margin-left: 5%;
+  text-align: left;
+  margin: 7% 0 0 5%;
 }
 
 #launchpad_image {
-  width: 200px;
+  /* width: 200px; */
+  max-height: 200px;
 }
 
 #filler_container {
-  height: 75px;
+  height: 50px;
 }
 
 #horizon_container {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   height: auto;
   text-align: center;
+  animation: fade-in, blur-in;
+  animation-duration: 2s, 3.5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
 }
 
 #horizon_image {
   width: 100%;
 }
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes blur-in {
+  0% { -webkit-filter: blur(40px)}
+  50% { -webkit-filter: blur(15px)}
+  75% { -webkit-filter: blur(9px)}
+  100% { -webkit-filter: blur(0px)}
+}
+
+/* 0% { -webkit-filter: blur(50px)}
+75% { -webkit-filter: blur(10px)}
+100% { -webkit-filter: blur(0px)} */
+
+
+/* 0% { -webkit-filter: blur(0px);}
+50% { -webkit-filter: blur(5px);}
+100% { -webkit-filter: blur(0px);} */
