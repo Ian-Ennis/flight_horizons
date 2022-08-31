@@ -1,19 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
-// import falcon9 from "../Images/falcon9.png"
-// import artemis_sls from "../Images/artemis_sls.png"
-// import abl_rs1 from "../Images/abl_rs1.png"
-// import ariane5 from "../Images/ariane5.png"
-// import firefly_alpha from "../Images/firefly_alpha.png"
-// import ula_atlas_v from "../Images/ula_atlas_v.png"
-// import soyuz_2 from "../Images/soyuz_2.png"
-// import ula_delta_iv from "../Images/ula_delta_iv.png"
-// import isro_pslv from "../Images/isro_pslv.png"
-// import rklb_electron from "../Images/rklb_electron.png"
-// import terran_1 from "../Images/terran_1.png"
-// import super_heavy from "../Images/super_heavy.png"
-// import antares from "../Images/antares.png"
-// import falcon_heavy from "../Images/falcon_heavy.png"
 
 function LaunchCarousel({ futureLaunches, handleSelect }) {
 

@@ -1,9 +1,7 @@
 import { useState } from "react";
-import title from "../Images/title.png";
 import LaunchCarousel from "./LaunchCarousel";
 import LaunchPad from "./LaunchPad";
 import LaunchDescription from "./LaunchDescription";
-import horizon from "../Images/horizon.png";
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -1230,7 +1228,7 @@ function Home() {
   return (
     <>
       <div id="home_title_container">
-        <img id="home_title" src={title} alt="flight_horizons" />
+        <img id="home_title" src="https://flight-horizons.s3.us-west-2.amazonaws.com/title.png" alt="flight_horizons" />
       </div>
 
       <div id="launch_container">
