@@ -110,6 +110,12 @@
   }
 }
 
+@media (max-width: 390px) {
+  #home_title_container {
+    margin: 15% auto 5%;
+  }
+}
+
 #home_title {
   max-width: 100%;
 }
@@ -177,6 +183,13 @@
   #carousel {
     max-width: 300px;
     min-width: 200px;
+  }
+}
+
+@media (max-width: 390px) {
+  #carousel {
+    max-width: 300px;
+    min-width: 250px;
   }
 }
 
