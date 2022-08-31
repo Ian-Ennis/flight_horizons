@@ -22,6 +22,10 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
 
     if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon 9") {
       launchImage = falcon9
+    } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Super Heavy / Starship Prototype") {
+      launchImage = super_heavy
+    } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon Heavy") {
+      launchImage = falcon_heavy
     } else if (launch.provider.name === "NASA" && launch.vehicle.name === "SLS") {
       launchImage = artemis_sls 
     } else if (launch.provider.name === "ABL Space" && launch.vehicle.name === "RS1") {
@@ -42,13 +46,9 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
       launchImage = rklb_electron
     } else if (launch.provider.name === "Relativity Space" && launch.vehicle.name === "Terran 1") {
       launchImage = terran_1
-    } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Super Heavy / Starship Prototype") {
-      launchImage = super_heavy
     } else if (launch.provider.name === "Northrop Grumman" && launch.vehicle.name === "Antares") {
       launchImage = antares
-    } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon Heavy") {
-      launchImage = falcon_heavy
-    }
+    } else return null
 
     const unixTimestamp = launch.sort_date * 1000
     const dateObject = new Date(unixTimestamp)
@@ -65,11 +65,9 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
     // console.log("toUTCString:", dateObject.toUTCString()) 
     // console.log("toString:", dateObject.toString()) 
 
-    
     return (
       <Carousel.Item key={launch.id}>
-        <p style={{ textAlign: "center", fontSize: 24, marginBottom: "20px" }}>{launchDay}, {launchMonth} {launchDate}, {launchTime} (Mountain)</p>
-        {/* <p style={{ textAlign: "center", fontSize: 24, marginBottom: "20px" }}>{launchTime} mountain</p> */}
+        <p style={{ textAlign: "center", fontSize: 24, marginBottom: "20px" }}>{launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)</p>
         <div id="vehicle_image_container">
           <img id="vehicle_image" src={launchImage} alt="launch_vehicle" />
         </div>

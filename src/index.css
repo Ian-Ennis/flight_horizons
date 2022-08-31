@@ -119,8 +119,15 @@
 }
 
 #launch_description_container {
-  text-align: right;
+  padding: 20px;
+  text-align: justify;
   margin: 7% 5% 0 0;
+  background-color: #252931;
+  max-width: 400px;
+}
+
+#launch_description_container p { 
+  background-color: #252931;
 }
 
 #carousel {
@@ -133,6 +140,8 @@
 }
 
 #vehicle_image_container {
+  max-height: 250px;
+  min-height: 250px;
   height: 250px;
   width: auto;
   display: flex;
@@ -142,18 +151,35 @@
 }
 
 #vehicle_image {
-  height: 100%;
+  margin: auto auto;
+  max-height: 200px;
+  min-height: 250px;
+  height: 250px;
   width: auto;
 }
 
 #launchpad_container {
-  text-align: left;
+  padding: 20px;
   margin: 7% 0 0 5%;
+  background-color: #252931;
+  max-width: 400px;
+}
+
+#launchpad_container p, a {
+  text-align: left;
+  background-color: #252931;
+}
+
+#launchpad_container a {
+  /* color: #317ab9; */
+  color: #8ec9ff;
 }
 
 #launchpad_image {
-  /* width: 200px; */
-  max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  max-height: 180px;
+  max-width: 300px;
 }
 
 #filler_container {
