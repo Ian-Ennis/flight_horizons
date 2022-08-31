@@ -1199,32 +1199,6 @@ function Home() {
     ],
   };
 
-  /* 
-  name: The name of the launch, generally derived from the primary mission's name
-
-  provider: An object with launch provider information
-
-  vehicle: An object with launch vehicle information
-
-  pad: An object with launch pad information
-    pad.location.name: A string with the launch pad location
-    pad.name: A string with the specific launch pad id
-    pad.location.state: A string with the state the launch is in
-
-  missions: An array of objects with mission information
-    missions.name: name of the mission
-  launch_description: bare bones details of the launch
-  mission_description: more in-depth description of the mission (sometimes null)
-  win_open: time the launch window opens
-  weather_summary: the weather for the launch window
-  media[0].youtube_vidid: the id of the youtube video?
-  */
-
-  // launch info (company, mission, date, etc)
-  // pad info
-  // weather
-  // media if there
-
   return (
     <>
       <div id="home_title_container">

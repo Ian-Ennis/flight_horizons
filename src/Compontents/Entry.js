@@ -3,7 +3,6 @@ function Entry() {
     return (
         <div id="entry_container">
             <div id="entry_title_container">
-                {/* <p>flight horizons</p> */}
                 <img id="entry_title_animated" src="https://flight-horizons.s3.us-west-2.amazonaws.com/title.png" alt="flight_horizons"/>
             </div>
             <div id="entry_visual_container">
