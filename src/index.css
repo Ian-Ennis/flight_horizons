@@ -104,6 +104,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  #home_title_container {
+    margin: 4% auto 1%;
+  }
+}
+
 #home_title {
   max-width: 100%;
 }
@@ -147,6 +153,12 @@
   max-height: 400px;
 }
 
+@media (max-width: 768px) {
+  #launch_description_container {
+    margin: 13% 5% 0 0;
+  }
+}
+
 #launch_description_container a {
   color: #8ec9ff;
 }
@@ -159,6 +171,13 @@
   width: 30%;
   min-width: 400px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #carousel {
+    max-width: 300px;
+    min-width: 200px;
+  }
 }
 
 .carousel .item {
@@ -193,6 +212,12 @@
   max-height: 400px;
 }
 
+@media (max-width: 768px) {
+  #launchpad_container {
+    margin: 13% 0 0 5%;
+  }
+}
+
 #launchpad_container p, a {
   text-align: left;
   background-color: #252931;
@@ -213,6 +238,12 @@
 
 #filler_container {
   height: 50px;
+}
+
+@media (max-width: 768px) {
+  #filler_container {
+    height: 150px;
+  }
 }
 
 #horizon_container {
