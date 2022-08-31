@@ -1,19 +1,19 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
-import falcon9 from "../Images/falcon9.png"
-import artemis_sls from "../Images/artemis_sls.png"
-import abl_rs1 from "../Images/abl_rs1.png"
-import ariane5 from "../Images/ariane5.png"
-import firefly_alpha from "../Images/firefly_alpha.png"
-import ula_atlas_v from "../Images/ula_atlas_v.png"
-import soyuz_2 from "../Images/soyuz_2.png"
-import ula_delta_iv from "../Images/ula_delta_iv.png"
-import isro_pslv from "../Images/isro_pslv.png"
-import rklb_electron from "../Images/rklb_electron.png"
-import terran_1 from "../Images/terran_1.png"
-import super_heavy from "../Images/super_heavy.png"
-import antares from "../Images/antares.png"
-import falcon_heavy from "../Images/falcon_heavy.png"
+// import falcon9 from "../Images/falcon9.png"
+// import artemis_sls from "../Images/artemis_sls.png"
+// import abl_rs1 from "../Images/abl_rs1.png"
+// import ariane5 from "../Images/ariane5.png"
+// import firefly_alpha from "../Images/firefly_alpha.png"
+// import ula_atlas_v from "../Images/ula_atlas_v.png"
+// import soyuz_2 from "../Images/soyuz_2.png"
+// import ula_delta_iv from "../Images/ula_delta_iv.png"
+// import isro_pslv from "../Images/isro_pslv.png"
+// import rklb_electron from "../Images/rklb_electron.png"
+// import terran_1 from "../Images/terran_1.png"
+// import super_heavy from "../Images/super_heavy.png"
+// import antares from "../Images/antares.png"
+// import falcon_heavy from "../Images/falcon_heavy.png"
 
 function LaunchCarousel({ futureLaunches, handleSelect }) {
 
@@ -21,33 +21,33 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
     let launchImage = "";
 
     if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon 9") {
-      launchImage = falcon9
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png`
     } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Super Heavy / Starship Prototype") {
-      launchImage = super_heavy
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png`
     } else if (launch.provider.name === "SpaceX" && launch.vehicle.name === "Falcon Heavy") {
-      launchImage = falcon_heavy
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png`
     } else if (launch.provider.name === "NASA" && launch.vehicle.name === "SLS") {
-      launchImage = artemis_sls 
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/artemis_sls.png` 
     } else if (launch.provider.name === "ABL Space" && launch.vehicle.name === "RS1") {
-      launchImage = abl_rs1
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/abl_rs1.png`
     } else if (launch.provider.name === "Arianespace" && launch.vehicle.name === "Ariane 5") {
-      launchImage = ariane5
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ariane5.png`
     } else if (launch.provider.name === "Firefly" && launch.vehicle.name === "Alpha") {
-      launchImage = firefly_alpha
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/firefly_alpha.png`
     } else if (launch.provider.name === "United Launch Alliance (ULA)" && launch.vehicle.name === "Atlas V") {
-      launchImage = ula_atlas_v
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_atlas_v.png`
     } else if (launch.provider.name === "Roscosmos" && launch.vehicle.name === "Soyuz-2") {
-      launchImage = soyuz_2
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/soyuz_2.png`
     } else if (launch.provider.name === "United Launch Alliance (ULA)" && launch.vehicle.name === "Delta IV Heavy") {
-      launchImage = ula_delta_iv
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_delta_iv.png`
     } else if (launch.provider.name === "ISRO" && launch.vehicle.name === "PSLV") {
-      launchImage = isro_pslv
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/isro_pslv.png`
     } else if (launch.provider.name === "Rocket Lab" && launch.vehicle.name === "Electron") {
-      launchImage = rklb_electron
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png`
     } else if (launch.provider.name === "Relativity Space" && launch.vehicle.name === "Terran 1") {
-      launchImage = terran_1
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png`
     } else if (launch.provider.name === "Northrop Grumman" && launch.vehicle.name === "Antares") {
-      launchImage = antares
+      launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png`
     } else return null
 
     const unixTimestamp = launch.sort_date * 1000

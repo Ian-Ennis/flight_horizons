@@ -1,3 +1,4 @@
+
 /* use of splat operator to override bootstrap's body styling */
 * {
   background-color: black;
@@ -176,6 +177,7 @@
 }
 
 #launchpad_image {
+  border-image-source: ;
   display: block;
   margin: 0 auto;
   max-height: 180px;

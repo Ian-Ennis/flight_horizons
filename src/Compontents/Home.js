@@ -1250,7 +1250,7 @@ function Home() {
       <div id="filler_container"></div>
 
       <div id="horizon_container">
-        <img id="horizon_image" src={horizon} alt="image_of_horizon" />
+        <img id="horizon_image" src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png" alt="image_of_horizon" />
       </div>
     </>
   );
