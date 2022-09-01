@@ -72,6 +72,7 @@
 }
 
 #entry_visual_container {
+  display: inline-block;
   position: relative;
   width: 10%;
   height: auto;
@@ -92,19 +93,19 @@
 }
 
 @keyframes entry-fade-in {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
 }
 
 @keyframes launch {
-  from { transform : translateY(0%) }
-  to { transform: translateY(-150%) }
+  from { -webkit-transform : translateY(0%) }
+  to { -webkit-transform: translateY(-150%) }
 }
 
 @keyframes entry-fade-out {
-  0% { opacity: 1 }
-  40% { opacity: 0 }
-  100% { opacity: 0 }
+  0% { -webkit-opacity: 1 }
+  40% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 0 }
 }
 
 #home_title_container {
@@ -162,9 +163,9 @@
 }
 
 @keyframes suspend-title {
-  0% { opacity: 0 }
-  20% { opacity: 0 }
-  100% { opacity: 1 }
+  0% { -webkit-opacity: 0 }
+  20% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
 }
 
 #launch_container {
@@ -190,9 +191,9 @@
 }
 
 @keyframes suspend {
-  0% { opacity: 0 }
-  50% { opacity: 0}
-  100% { opacity: 1 }
+  0% { -webkit-opacity: 0 }
+  50% { -webkit-opacity: 0}
+  100% { -webkit-opacity: 1 }
 }
 
 #launchpad_container, #carousel, #launch_description_container {
@@ -379,8 +380,8 @@
 }
 
 @keyframes fade-in {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
+  0% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
 }
 
 @keyframes blur-in {
