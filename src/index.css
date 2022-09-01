@@ -127,7 +127,7 @@
   #home_title_container, #filler_container, #horizon_container {
     max-width: 390px;
     padding: 20px;
-    margin: 2% auto -10% auto;
+    margin: 2% auto 0% auto;
   }
 }
 
@@ -189,10 +189,6 @@
   0% { opacity: 0 }
   50% { opacity: 0}
   100% { opacity: 1 }
-}
-
-#launch_carousel {
-  display: none;
 }
 
 #launchpad_container, #carousel, #launch_description_container {
@@ -266,7 +262,7 @@
 
 @media (max-width: 390px) {
   #carousel {
-    min-width: 250px;
+    min-width: 320px;
     order: 1;
   }
 }
@@ -364,7 +360,6 @@
   animation: fade-in, blur-in;
   animation-duration: 2s, 3.5s;
   animation-timing-function: ease-in;
-  animation-delay: 0s;
 }
 
 @media (max-width: 390px) {
