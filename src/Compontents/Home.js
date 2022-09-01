@@ -1206,22 +1206,23 @@ function Home() {
       </div>
 
       <div id="launch_container">
-          <LaunchPad futureLaunches={futureLaunches.result} index={index} />
+        <LaunchDescription
+          futureLaunches={futureLaunches.result}
+          index={index}
+        />
 
           <LaunchCarousel 
             futureLaunches={futureLaunches.result}
             handleSelect={handleSelect}
           />
 
-          <LaunchDescription
-            futureLaunches={futureLaunches.result}
-            index={index}
-          />
+          <LaunchPad futureLaunches={futureLaunches.result} index={index} />
       </div>
       <div id="filler_container"></div>
 
       <div id="horizon_container">
-        <img id="horizon_image" src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png" alt="image_of_horizon" />
+        <img id="horizon_image_large" src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png" alt="image_of_horizon" />
+        <img id="horizon_image_small" src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png" alt="image_of_horizon" />
       </div>
     </>
   );
