@@ -1208,12 +1208,10 @@ function Home() {
       <div id="launch_container">
           <LaunchPad futureLaunches={futureLaunches.result} index={index} />
 
-        {/* <div id="launch_carousel"> */}
           <LaunchCarousel 
             futureLaunches={futureLaunches.result}
             handleSelect={handleSelect}
           />
-        {/* </div> */}
 
           <LaunchDescription
             futureLaunches={futureLaunches.result}

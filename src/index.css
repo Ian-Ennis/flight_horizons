@@ -1,10 +1,10 @@
 /* use of splat operator to override bootstrap's body styling */
 * {
   background-color: black;
-  color: rgb(235, 235, 235);
+  color: rgb(255, 255, 255);
   /* text-transform: lowercase; */
-  /* font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif; */
   font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /* font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif; */
   /* font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif; */
   /* font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif; */
   /* font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; */
@@ -32,12 +32,14 @@
 @media (max-width: 768px) {
   #entry_container {
     margin-top: 60%;
+    width: 100%;
   }
 }
 
 @media (max-width: 390px) {
   #entry_container {
-    margin-top: 100%;
+    margin-top: 90%;
+    gap: 0 24px;
   }
 }
 
@@ -46,6 +48,12 @@
   display: inline-block;
   width: 50%;
   height: auto;
+}
+
+@media (max-width: 390px) {
+  #entry_title_container {
+    width: 66%;
+  }
 }
 
 #entry_title_animated {
@@ -63,6 +71,12 @@
   position: relative;
   width: 10%;
   height: auto;
+}
+
+@media (max-width: 390px) {
+  #entry_visual_container {
+    width: 16%;
+  }
 }
 
 #entry_visual_animated {
@@ -121,7 +135,7 @@
   #home_title_container, #launch_container, #filler_container, #horizon_container {
     max-width: 360px;
     padding: 20px;
-    /* margin: 2% auto -10% auto; */
+    margin: 2% auto -10% auto;
   }
 }
 
@@ -150,7 +164,6 @@
 
 @media (max-width: 390px) {
   #launch_container {
-    /* margin: 0 auto; */
     flex-direction: column;
     gap: 20px 0;
   }
@@ -255,8 +268,9 @@
 }
 
 #vehicle_image_container {
-  max-height: 250px;
-  min-height: 250px;
+  /* max-height: 250px;
+  min-height: 250px; */
+  height: 250px;
   height: 250px;
   width: auto;
   display: flex;
@@ -336,10 +350,7 @@
 }
 
 #horizon_container {
-  /* position: fixed;
-  bottom: 0; */
   max-width: 100%;
-  /* min-width: 700px; */
   height: auto;
   text-align: center;
   animation: fade-in, blur-in;
