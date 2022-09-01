@@ -65,7 +65,7 @@
   bottom: 11%;
   max-width: 100%;
   max-height: auto;
-  animation-name: entry-fade-in, entry-fade-out;
+  animation-name: entry-title-fade-in, entry-title-fade-out;
   animation-duration: 2s, 4s;
   animation-timing-function: ease-in;
   animation-delay: 0s, 4.5s;
@@ -76,6 +76,11 @@
   position: relative;
   width: 10%;
   height: auto;
+
+  animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
+  animation-duration: 2s, 3s, 5s;
+  animation-timing-function: ease-in, ease-in, ease;
+  animation-delay: 0s, 2s, 3s;
 }
 
 @media (max-width: 390px) {
@@ -86,13 +91,26 @@
 
 #entry_visual_animated {
   max-width: 100%;
-  animation-name: entry-fade-in, launch, entry-fade-out;
+  /* animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
   animation-duration: 2s, 3s, 5s;
   animation-timing-function: ease-in, ease-in, ease;
-  animation-delay: 0s, 2s, 3s;
+  animation-delay: 0s, 2s, 3s; */
 }
 
-@keyframes entry-fade-in {
+@keyframes entry-title-fade-in {
+  0% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
+}
+
+@keyframes entry-title-fade-out {
+  0% { -webkit-opacity: 1 }
+  40% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 0 }
+}
+
+/*  */
+
+@keyframes entry-visual-fade-in {
   0% { -webkit-opacity: 0 }
   100% { -webkit-opacity: 1 }
 }
@@ -102,7 +120,7 @@
   to { -webkit-transform: translateY(-150%) }
 }
 
-@keyframes entry-fade-out {
+@keyframes entry-visual-fade-out {
   0% { -webkit-opacity: 1 }
   40% { -webkit-opacity: 0 }
   100% { -webkit-opacity: 0 }
