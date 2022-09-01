@@ -66,7 +66,7 @@ function LaunchCarousel({ futureLaunches, handleSelect }) {
 
   return (
     <div id="carousel" style={{ display: "block", width: 700, padding: 30 }}>
-      <Carousel interval={null} indicators={false} wrap={false} onSelect={handleSelect}>{futureLaunch}</Carousel>
+      <Carousel interval={null} indicators={false} wrap={false} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon"/>} onSelect={handleSelect}>{futureLaunch}</Carousel>
     </div>
   );
 }
