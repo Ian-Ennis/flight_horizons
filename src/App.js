@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      {entry ? <Entry /> : <Home />}
+      {animate ? <Entry /> : <Home />}
     </>
   );
 }

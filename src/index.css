@@ -139,6 +139,14 @@
   }
 }
 
+@media (max-width: 360px) {
+  #home_title_container {
+    max-width: 360px;
+    padding: 20px;
+    margin: 2% auto -6% auto;
+  }
+}
+
 #home_title {
   max-width: 100%;
 }
