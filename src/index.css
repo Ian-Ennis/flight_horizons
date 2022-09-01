@@ -66,7 +66,7 @@
   max-width: 100%;
   max-height: auto;
   animation-name: entry-title-fade-in, entry-title-fade-out;
-  animation-duration: 2s, 4s;
+  animation-duration: 2s, 4.25s;
   animation-timing-function: ease-in;
   animation-delay: 0s, 4.5s;
 }
@@ -78,9 +78,9 @@
   height: auto;
 
   animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
-  animation-duration: 2s, 3s, 5s;
-  animation-timing-function: ease-in, ease-in, ease;
-  animation-delay: 0s, 2s, 3s;
+  animation-duration: 2s, 6.5s, 4s;
+  animation-timing-function: ease-in, ease-in, ease-in;
+  animation-delay: 0s, 2.25s, 3s;
 }
 
 @media (max-width: 390px) {
@@ -104,7 +104,7 @@
 
 @keyframes entry-title-fade-out {
   0% { -webkit-opacity: 1 }
-  40% { -webkit-opacity: 0 }
+  /* 40% { -webkit-opacity: 0 } */
   100% { -webkit-opacity: 0 }
 }
 
@@ -117,12 +117,12 @@
 
 @keyframes launch {
   from { -webkit-transform : translateY(0%) }
-  to { -webkit-transform: translateY(-150%) }
+  to { -webkit-transform: translateY(-400%) }
 }
 
 @keyframes entry-visual-fade-out {
   0% { -webkit-opacity: 1 }
-  40% { -webkit-opacity: 0 }
+  /* 40% { -webkit-opacity: 0 } */
   100% { -webkit-opacity: 0 }
 }
 
