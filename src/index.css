@@ -116,8 +116,8 @@
 }
 
 @keyframes launch {
-  from { -webkit-transform : translateY(0%) }
-  to { -webkit-transform: translateY(-1000%) }
+  from { -webkit-transform : translateY(0px) }
+  to { -webkit-transform: translateY(-4000px) }
 }
 
 @keyframes entry-visual-fade-out {
