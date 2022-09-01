@@ -1206,19 +1206,20 @@ function Home() {
       </div>
 
       <div id="launch_container">
-        <LaunchPad futureLaunches={futureLaunches.result} index={index} />
+          <LaunchPad futureLaunches={futureLaunches.result} index={index} />
 
-        <LaunchCarousel
-          futureLaunches={futureLaunches.result}
-          handleSelect={handleSelect}
-        />
+        {/* <div id="launch_carousel"> */}
+          <LaunchCarousel 
+            futureLaunches={futureLaunches.result}
+            handleSelect={handleSelect}
+          />
+        {/* </div> */}
 
-        <LaunchDescription
-          futureLaunches={futureLaunches.result}
-          index={index}
-        />
+          <LaunchDescription
+            futureLaunches={futureLaunches.result}
+            index={index}
+          />
       </div>
-
       <div id="filler_container"></div>
 
       <div id="horizon_container">

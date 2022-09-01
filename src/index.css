@@ -19,7 +19,6 @@
   /* font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; */
 }
 
-
 #entry_container {
   width: 60%;
   margin: 0 auto;
@@ -111,13 +110,21 @@
 }
 
 @media (max-width: 390px) {
-  #home_title_container {
-    margin: 15% auto 5%;
+  #home_title_container, #launch_container, #filler_container, #horizon_container {
+    max-width: 390px;
+    padding: 20px;
+    margin: 2% auto -10% auto;
   }
 }
 
 #home_title {
   max-width: 100%;
+}
+
+@media (max-width: 390px) {
+  #home_title {
+    max-width: 100%;
+  }
 }
 
 @keyframes suspend-title {
@@ -133,11 +140,12 @@
   animation-duration: 8s;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 390px) {
   #launch_container {
     flex-direction: column;
+    gap: 20px 0;
   }
-} */
+}
 
 @keyframes suspend {
   0% { opacity: 0 }
@@ -145,8 +153,18 @@
   100% { opacity: 1 }
 }
 
+#launch_carousel {
+  display: none;
+}
+
 #launchpad_container, #carousel, #launch_description_container {
   width: 33.33%;
+}
+
+@media (max-width: 390px) {
+  #launchpad_container, #carousel, #launch_description_container {
+    max-width: 33.33%;
+  }
 }
 
 #launch_description_container {
@@ -162,6 +180,14 @@
 @media (max-width: 768px) {
   #launch_description_container {
     margin: 13% 5% 0 0;
+  }
+}
+
+@media (max-width: 390px) {
+  #launch_description_container {
+    order: 2;
+    width: 350px;
+    margin: 0 auto;
   }
 }
 
@@ -188,8 +214,8 @@
 
 @media (max-width: 390px) {
   #carousel {
-    max-width: 300px;
     min-width: 250px;
+    order: 1;
   }
 }
 
@@ -231,6 +257,14 @@
   }
 }
 
+@media (max-width: 390px) {
+  #launchpad_container {
+    order: 3;
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
 #launchpad_container p, a {
   text-align: left;
   background-color: #252931;
@@ -243,10 +277,7 @@
 #launchpad_image {
   display: block;
   margin: 0 auto;
-  /* max-height: 180px; */
-  /* min-height: 100px; */
   max-width: 100%;
-  /* min-width: 200px; */
 }
 
 #filler_container {
@@ -259,22 +290,34 @@
   }
 }
 
+@media (max-width: 390px) {
+  #filler_container {
+    height: 60px;
+  }
+}
+
 #horizon_container {
   /* position: fixed;
   bottom: 0; */
-  width: 100%;
-  min-width: 700px;
+  max-width: 100%;
+  /* min-width: 700px; */
   height: auto;
   text-align: center;
-  /* z-index: -1; */
   animation: fade-in, blur-in;
   animation-duration: 2s, 3.5s;
   animation-timing-function: ease-in;
   animation-delay: 0s;
 }
 
+@media (max-width: 390px) {
+  #horizon_container {
+    min-width: 100%;
+  }
+}
+
 #horizon_image {
   width: 100%;
+  height: 100%;
 }
 
 @keyframes fade-in {
