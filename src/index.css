@@ -19,6 +19,10 @@
   /* font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; */
 }
 
+.carousel-fade {
+  display: none;
+}
+
 #entry_container {
   width: 60%;
   margin: 0 auto;
@@ -335,6 +339,7 @@
   display: block;
   margin: 0 auto;
   max-width: 100%;
+  max-height: 180px;
 }
 
 #filler_container {
