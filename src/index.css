@@ -125,7 +125,7 @@
   width: 700px;
   animation: suspend-title;
   animation-timing-function: ease-in;
-  animation-duration: 5.5s;
+  animation-duration: 3s;
 }
 
 @media (max-width: 1500px) {
@@ -184,7 +184,7 @@
   display: flex;
   flex-direction: row;
   animation: suspend;
-  animation-duration: 8s;
+  animation-duration: 6s;
 }
 
 @media (max-width: 390px) {
