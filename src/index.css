@@ -251,12 +251,12 @@
   margin: 0 auto;
 }
 
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+.carousel .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="23.828" height="23.66" fill="%23fff"><path d="M12 22a9.947 9.947 0 0 1-9.756-7.778A1 1 0 0 1 3.22 13H12a1 1 0 0 1 1 1v.586L15.586 12 13 9.414V10a1 1 0 0 1-1 1H3.22a1 1 0 0 1-.976-1.222A10 10 0 1 1 12 22zm-7.42-7A8 8 0 1 0 12 4a8.071 8.071 0 0 0-7.42 5H11V7a1 1 0 0 1 1.707-.707l5 5a1 1 0 0 1 0 1.414l-5 5A1 1 0 0 1 11 17v-2z" data-name="Circle kanan"/></svg>');
 }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+.carousel .carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="23.828" height="23.66" fill="%23fff"><path d="M12 22a10 10 0 1 1 9.756-12.222A1 1 0 0 1 20.78 11H12a1 1 0 0 1-1-1v-.586L8.414 12 11 14.586V14a1 1 0 0 1 1-1h8.78a1 1 0 0 1 .976 1.222A9.947 9.947 0 0 1 12 22zm0-18a8 8 0 1 0 7.42 11H13v2a1 1 0 0 1-1.707.707l-5-5a1 1 0 0 1 0-1.414l5-5A1 1 0 0 1 13 7v2h6.42A8.071 8.071 0 0 0 12 4z" data-name="Circle kiri"/></svg>');
 }
 
 @media (max-width: 768px) {
