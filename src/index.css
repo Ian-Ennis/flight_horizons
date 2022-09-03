@@ -1,23 +1,28 @@
-/* use of splat operator to override bootstrap's body styling */
+/* 
+Styling notes:
+  -To jump between sections of styled code, use the search function for pipes ||
+  -All keyframes animations are specified directly below the animation call 
+  -Only ID's are used, as classnames aren't necessary, as there are no multiples of elements
+  -The only boostrap utilized in this project is Bootstrap Carousel (Bootstrap 5.2.0 is installed)
+  -Media queries are intended for:
+    Large desktop monitors (viewport width of 1920px)
+    15" screens (viewport width adjusted to 1500px)
+    iPads (viewport width of 768px)
+    iPhone 12 (viewport width of 390px)
+    iPhone 12 mini (viewport width of 360px)
+*/
+
+
+/* || SITEWIDE: Override of Bootstrap body styling */
+
 * {
   background-color: black;
   color: rgb(255, 255, 255);
-  /* text-transform: lowercase; */
   font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  /* font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif; */
-  /* font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif; */
-  /* font-family: Garamond, Baskerville, Baskerville Old Face, Hoefler Text, Times New Roman, serif; */
-  /* font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; */
-  /* font-family: Georgia, Times, Times New Roman, serif; */
-  /* font-family: Lucida Bright, Georgia, serif; */
-  /* font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif; */
-  /* font-family: Perpetua, Baskerville, Big Caslon, Palatino Linotype, Palatino, serif; */
-  /* font-family: Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif; */
-  /* font-family: "Open Sans", Arial, sans-serif; */
-  /* font-family: Arial, Baskerville, monospace; */
-  /* font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif; */
-  /* font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; */
 }
+
+
+/* || Styling for Entry.js */
 
 #entry_container {
   width: 60%;
@@ -67,32 +72,6 @@
   animation-delay: 0s, 4.5s;
 }
 
-#entry_visual_container {
-  display: inline-block;
-  position: relative;
-  width: 10%;
-  height: auto;
-
-  animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
-  animation-duration: 2s, 6.5s, 8.5s;
-  animation-timing-function: ease-in, ease-in, ease-in;
-  animation-delay: 0s, 2.25s, 2.75s;
-}
-
-@media (max-width: 390px) {
-  #entry_visual_container {
-    width: 16%;
-  }
-}
-
-#entry_visual_animated {
-  max-width: 100%;
-  /* animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
-  animation-duration: 2s, 3s, 5s;
-  animation-timing-function: ease-in, ease-in, ease;
-  animation-delay: 0s, 2s, 3s; */
-}
-
 @keyframes entry-title-fade-in {
   0% { -webkit-opacity: 0 }
   100% { -webkit-opacity: 1 }
@@ -102,6 +81,17 @@
   0% { -webkit-opacity: 1 }
   50% { -webkit-opacity: 0 }
   100% { -webkit-opacity: 0 }
+}
+
+#entry_visual_container {
+  display: inline-block;
+  position: relative;
+  width: 10%;
+  height: auto;
+  animation-name: entry-visual-fade-in, launch, entry-visual-fade-out;
+  animation-duration: 2s, 6.5s, 8.5s;
+  animation-timing-function: ease-in, ease-in, ease-in;
+  animation-delay: 0s, 2.25s, 2.75s;
 }
 
 @keyframes entry-visual-fade-in {
@@ -120,12 +110,31 @@
   100% { -webkit-opacity: 0 }
 }
 
+@media (max-width: 390px) {
+  #entry_visual_container {
+    width: 16%;
+  }
+}
+
+#entry_visual_animated {
+  max-width: 100%;
+}
+
+
+/* || Styling for Home.js */
+
 #home_title_container {
   margin: 2.5% auto;
   width: 700px;
   animation: suspend-title;
   animation-timing-function: ease-in;
   animation-duration: 3s;
+}
+
+@keyframes suspend-title {
+  0% { -webkit-opacity: 0 }
+  20% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
 }
 
 @media (max-width: 1500px) {
@@ -158,8 +167,6 @@
 
 @media (max-width: 360px) {
   #home_title_container {
-    max-width: 360px;
-    padding: 20px;
     margin: 2% auto -6% auto;
   }
 }
@@ -174,17 +181,17 @@
   }
 }
 
-@keyframes suspend-title {
-  0% { -webkit-opacity: 0 }
-  20% { -webkit-opacity: 0 }
-  100% { -webkit-opacity: 1 }
-}
-
 #launch_container {
   display: flex;
   flex-direction: row;
   animation: suspend;
-  animation-duration: 6s;
+  animation-duration: 5s;
+}
+
+@keyframes suspend {
+  0% { -webkit-opacity: 0 }
+  50% { -webkit-opacity: 0}
+  100% { -webkit-opacity: 1 }
 }
 
 @media (max-width: 390px) {
@@ -201,15 +208,12 @@
   }
 }
 
-@keyframes suspend {
-  0% { -webkit-opacity: 0 }
-  50% { -webkit-opacity: 0}
-  100% { -webkit-opacity: 1 }
-}
-
-#launchpad_container, #carousel, #launch_description_container {
+#launch_description_container, #carousel, #launchpad_container {
   width: 33.33%;
 }
+
+
+/* || Styling for LaunchDescription.js (Launch Provider, Mission, etc) */
 
 #launch_description_container {
   padding: 20px;
@@ -219,6 +223,14 @@
   max-width: 400px;
   min-width: 180px;
   max-height: 400px;
+}
+
+#launch_description_container p { 
+  background-color: #252931;
+}
+
+#launch_description_container a {
+  color: #8ec9ff;
 }
 
 @media (max-width: 390px) {
@@ -237,13 +249,8 @@
   }
 }
 
-#launch_description_container a {
-  color: #8ec9ff;
-}
 
-#launch_description_container p { 
-  background-color: #252931;
-}
+/* || Styling LaunchCarousel.js */
 
 #carousel {
   width: 30%;
@@ -259,6 +266,10 @@
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="23.828" height="23.66" fill="%23fff"><path d="M12 22a10 10 0 1 1 9.756-12.222A1 1 0 0 1 20.78 11H12a1 1 0 0 1-1-1v-.586L8.414 12 11 14.586V14a1 1 0 0 1 1-1h8.78a1 1 0 0 1 .976 1.222A9.947 9.947 0 0 1 12 22zm0-18a8 8 0 1 0 7.42 11H13v2a1 1 0 0 1-1.707.707l-5-5a1 1 0 0 1 0-1.414l5-5A1 1 0 0 1 13 7v2h6.42A8.071 8.071 0 0 0 12 4z" data-name="Circle kiri"/></svg>');
 }
 
+.carousel .item {
+  height: 1000px;
+}
+
 @media (max-width: 768px) {
   #carousel {
     max-width: 300px;
@@ -271,10 +282,6 @@
     min-width: 320px;
     order: 1;
   }
-}
-
-.carousel .item {
-  height: 1000px;
 }
 
 #vehicle_image_container {
@@ -295,6 +302,9 @@
   width: auto;
 }
 
+
+/* || Styling for LaunchPad.js (Pad, Facility, etc) */
+
 #launchpad_container {
   padding: 20px;
   margin: 7% 5% 0 0;
@@ -302,6 +312,15 @@
   max-width: 400px;
   min-width: 180px;
   max-height: 400px;
+}
+
+#launchpad_container p, a {
+  text-align: left;
+  background-color: #252931;
+}
+
+#launchpad_container a {
+  color: #8ec9ff;
 }
 
 @media (max-width: 390px) {
@@ -320,24 +339,17 @@
   }
 }
 
-#launchpad_container p, a {
-  text-align: left;
-  background-color: #252931;
-}
-
-#launchpad_container a {
-  color: #8ec9ff;
-}
-
 #launchpad_image {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   max-height: 180px;
   border-radius: 2px;
-  /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); */
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.14)
 }
+
+
+/* || Styling for space between containers */
 
 #filler_container {
   height: 50px;
@@ -356,6 +368,9 @@
   }
 }
 
+
+/* || Styling for bottom horizon graphic for both large and small screens */
+
 #horizon_container {
   max-width: 100%;
   height: auto;
@@ -363,6 +378,18 @@
   animation: fade-in, blur-in;
   animation-duration: 2s, 3.5s;
   animation-timing-function: ease-in;
+}
+
+@keyframes fade-in {
+  0% { -webkit-opacity: 0 }
+  100% { -webkit-opacity: 1 }
+}
+
+@keyframes blur-in {
+  0% { -webkit-filter: blur(40px)}
+  50% { -webkit-filter: blur(15px)}
+  75% { -webkit-filter: blur(9px)}
+  100% { -webkit-filter: blur(0px)}
 }
 
 @media (max-width: 390px) {
@@ -392,16 +419,4 @@
     width: 100%;
     height: auto;
   }
-}
-
-@keyframes fade-in {
-  0% { -webkit-opacity: 0 }
-  100% { -webkit-opacity: 1 }
-}
-
-@keyframes blur-in {
-  0% { -webkit-filter: blur(40px)}
-  50% { -webkit-filter: blur(15px)}
-  75% { -webkit-filter: blur(9px)}
-  100% { -webkit-filter: blur(0px)}
 }

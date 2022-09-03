@@ -6,10 +6,12 @@ import LaunchDescription from "./LaunchDescription";
 function Home() {
   const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
+  // import and test this function
+  function handleSelect(selectedIndex) {
     setIndex(selectedIndex);
   };
 
+  // make into API call 
   const futureLaunches = {
     valid_auth: true,
     count: 25,
