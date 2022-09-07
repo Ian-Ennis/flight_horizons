@@ -376,12 +376,13 @@ Styling notes:
   height: auto;
   text-align: center;
   animation: fade-in, blur-in;
-  animation-duration: 2s, 3.5s;
+  animation-duration: 3.5s, 3.5s;
   animation-timing-function: ease-in;
 }
 
 @keyframes fade-in {
   0% { -webkit-opacity: 0 }
+  0% { -webkit-opacity: 1 }
   100% { -webkit-opacity: 1 }
 }
 

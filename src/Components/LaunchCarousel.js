@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
 
-function LaunchCarousel({ futureLaunches, handleSelect }) {
+function LaunchCarousel({ launches, handleSelect }) {
 
-  const launchesMap = futureLaunches.map((launch) => {
+  const launchesMap = launches.map((launch) => {
       let launchImage = "";
 
       if (launch.vehicle.name === "Falcon 9") {
