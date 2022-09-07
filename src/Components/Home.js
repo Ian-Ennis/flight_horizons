@@ -43,7 +43,7 @@ function Home({ launches }) {
         />
         <img
           id="horizon_image_small"
-          src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png"
+          src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_2_mobile.png"
           alt="image_of_horizon"
         />
       </div>
