@@ -375,21 +375,21 @@ Styling notes:
   max-width: 100%;
   height: auto;
   text-align: center;
-  animation: fade-in, blur-in;
-  animation-duration: 3.5s, 3.5s;
+  animation: fade-in;
+  animation-duration: 3.5s;
   animation-timing-function: ease-in;
 }
 
 @keyframes fade-in {
   0% { -webkit-opacity: 0 }
-  0% { -webkit-opacity: 1 }
+  /* 0% { -webkit-opacity: 1 } */
   100% { -webkit-opacity: 1 }
 }
 
 @keyframes blur-in {
   0% { -webkit-filter: blur(40px)}
-  50% { -webkit-filter: blur(15px)}
-  75% { -webkit-filter: blur(9px)}
+  /* 50% { -webkit-filter: blur(15px)}
+  75% { -webkit-filter: blur(9px)} */
   100% { -webkit-filter: blur(0px)}
 }
 

@@ -38,7 +38,7 @@ function Home({ launches }) {
       <div id="horizon_container">
         <img
           id="horizon_image_large"
-          src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png"
+          src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_2.png"
           alt="image_of_horizon"
         />
         <img
