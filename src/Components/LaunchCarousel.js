@@ -4,36 +4,36 @@ import Carousel from "react-bootstrap/Carousel";
 function LaunchCarousel({ launches, handleSelect }) {
 
   const launchesMap = launches.map((launch) => {
-      let launchImage = "";
+      let vehicleImage = "";
 
       if (launch.vehicle.name === "Falcon 9") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png`;
       } else if (launch.vehicle.name === "Super Heavy / Starship Prototype") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png`;
       } else if (launch.vehicle.name === "Falcon Heavy") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png`;
       } else if (launch.vehicle.name === "SLS") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/artemis_sls.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/artemis_sls.png`;
       } else if (launch.vehicle.name === "RS1") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/abl_rs1.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/abl_rs1.png`;
       } else if (launch.vehicle.name === "Ariane 5") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ariane5.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ariane5.png`;
       } else if (launch.vehicle.name === "Alpha") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/firefly_alpha.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/firefly_alpha.png`;
       } else if (launch.vehicle.name === "Atlas V") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_atlas_v.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_atlas_v.png`;
       } else if (launch.vehicle.name === "Soyuz-2") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/soyuz_2.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/soyuz_2.png`;
       } else if (launch.vehicle.name === "Delta IV Heavy") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_delta_iv.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_delta_iv.png`;
       } else if (launch.vehicle.name === "PSLV") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/isro_pslv.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/isro_pslv.png`;
       } else if (launch.vehicle.name === "Electron") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png`;
       } else if (launch.vehicle.name === "Terran 1") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png`;
       } else if (launch.vehicle.name === "Antares") {
-        launchImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png`;
+        vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png`;
       } else return null;
       // add return div above if no launch vehicle information is present
 
@@ -48,7 +48,7 @@ function LaunchCarousel({ launches, handleSelect }) {
         <Carousel.Item key={launch.id}>
           <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px" }}>{launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)</p>
           <div id="vehicle_image_container">
-            <img id="vehicle_image" src={launchImage} alt="launch_vehicle" />
+            <img id="vehicle_image" src={vehicleImage} alt="launch_vehicle" />
           </div>
           <Carousel.Caption>
             <h5 style={{ textAlign: "center" }}>{launch.vehicle.name}</h5>

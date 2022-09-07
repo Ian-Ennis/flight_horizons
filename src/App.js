@@ -1214,14 +1214,12 @@ function App() {
   // - '' '' '' '' '' '' we didn't transition to the home screen after initial animation
 
   useEffect(() => {
-    console.log('in fetch useEffect')
     const fetchData = async () => {
       const response = await fetch("https://fdo.rocketlaunch.live/json/launches?key=8d15b6e5-4f07-4c6b-b60a-b37c26603bed");
       if (!response.ok) {
         throw new Error("Bad network response");
       }
       const json = await response.json();
-      console.log("json:", json)
       setUpcomingLaunches(json)
     }
 
@@ -1242,7 +1240,7 @@ function App() {
 
   return (
     <>
-      {animate ? <Entry /> : <Home launches={hardcodeLaunches.result} />}
+      {animate ? <Entry /> : <Home launches={upcomingLaunches.result} />}
     </>
   );
 }

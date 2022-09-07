@@ -23,10 +23,7 @@ function Home({ launches }) {
       <div id="launch_container">
         <LaunchDescription launches={launches} index={index} />
 
-        <LaunchCarousel
-          launches={launches}
-          handleSelect={handleSelect}
-        />
+        <LaunchCarousel launches={launches} handleSelect={handleSelect} />
 
         <LaunchPad launches={launches} index={index} />
       </div>

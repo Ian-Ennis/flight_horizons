@@ -1,12 +1,13 @@
-import render from 'react-test-renderer'
-import Entry from "../Components"
-
-
-
+import { render } from '@testing-library/react'
 // import { render, screen } from '@testing-library/react';
-// import Entry from '../Compontents/Entry';
+import Entry from "../Components/Entry"
 
-// test('it renders the entry page', () => {
+it('matches the DOM snapshot', () => {
+  const domTree = render(<Entry />)
+  expect(domTree).toMatchSnapshot();
+})
+
+// it('it renders the entry page', () => {
 //   render(<Entry />);
 
 //   const appTitleImage = screen.getByAltText('flight_horizons_title')
