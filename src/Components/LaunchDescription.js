@@ -1,26 +1,37 @@
-function LaunchDescription({ launches, index}) {
+import React from 'react';
 
-    let providerWebsite = null;
-    let missionWebsite = null;
+function LaunchDescription({ launches, index }) {
+
+    let providerWebsite;
+    let missionWebsite;
 
     if (launches[index].provider.name === "NASA") {
         providerWebsite = `https://www.nasa.gov/` 
+
     } else if (launches[index].provider.name === "SpaceX") {
         providerWebsite = `https://www.spacex.com/`
+
     } else if (launches[index].provider.name === "Arianespace") {
         providerWebsite = `https://www.arianespace.com/`
+
     } else if (launches[index].provider.name === "ABL Space") {
         providerWebsite = `https://ablspacesystems.com/`
+
     } else if (launches[index].provider.name === "Firefly") {
         providerWebsite = `https://firefly.com/`
+
     } else if (launches[index].provider.name === "United Launch Alliance (ULA)") {
         providerWebsite = `https://www.ulalaunch.com/`
+
     } else if (launches[index].provider.name === "Rocket Lab") {
         providerWebsite = `https://www.rocketlabusa.com/`
+
     } else if (launches[index].provider.name === "Relativity Space") {
         providerWebsite = `https://www.relativityspace.com/`
+
     } else if (launches[index].provider.name === "Northrop Grumman") {
         providerWebsite = `https://www.northropgrumman.com/space/`
+
     } else providerWebsite = null
 
 
@@ -74,13 +85,13 @@ function LaunchDescription({ launches, index}) {
 
     } else if (launches[index].name.slice(0,3) === "SES") {
         missionWebsite = `https://www.ses.com/`
-    }
+    } else missionWebsite = null;
 
     return (
         <div id="launch_description_container">
-            <p>Provider: <a href={providerWebsite} target="_blank">{launches[index].provider.name}</a></p>
-            <p>Mission: <a href={missionWebsite} target="_blank">{launches[index].name}</a></p>
-            <p>{launches[index].launch_description}</p>
+            {providerWebsite ? <p>Provider: <a href={providerWebsite} target="_blank">{launches[index].provider.name}</a></p> : null}
+            {missionWebsite ? <p>Mission: <a href={missionWebsite} target="_blank">{launches[index].name}</a></p> : null}
+            {launches[index].launch_description ? <p>{launches[index].launch_description}</p> : null}
         </div>
     )
 }

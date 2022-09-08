@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LaunchCarousel from "./LaunchCarousel";
 import LaunchPad from "./LaunchPad";
 import LaunchDescription from "./LaunchDescription";

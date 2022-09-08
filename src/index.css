@@ -139,13 +139,13 @@ Styling notes:
 
 @media (max-width: 1500px) {
   #home_title_container {
-    margin: 1% auto -1%;
+    margin: 1% auto 2%;
   }
 }
 
 @media (max-width: 768px) {
   #home_title_container {
-    margin: 4% auto 1%;
+    margin: 4% auto 8%;
   }
 }
 
@@ -358,13 +358,13 @@ Styling notes:
 
 @media (max-width: 768px) {
   #filler_container {
-    height: 150px;
+    height: 100px;
   }
 }
 
 @media (max-width: 390px) {
   #filler_container {
-    height: 0px;
+    height: 50px;
     padding: 0px;
   }
 }

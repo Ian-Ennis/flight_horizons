@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 function LaunchCarousel({ launches, handleSelect }) {
 
   const launchesMap = launches.map((launch) => {
-      let vehicleImage = "";
+      let vehicleImage;
 
       if (launch.vehicle.name === "Falcon 9") {
         vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png`;
@@ -35,14 +35,13 @@ function LaunchCarousel({ launches, handleSelect }) {
       } else if (launch.vehicle.name === "Antares") {
         vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png`;
       } else return null;
-      // add return div above if no launch vehicle information is present
 
-      const unixTimestamp = launch.sort_date * 1000;
-      const dateObject = new Date(unixTimestamp);
-      const launchDay = dateObject.toLocaleString("en-US", { weekday: "long" });
-      const launchMonth = dateObject.toLocaleString("en-US", { month: "long" });
-      const launchDate = dateObject.toLocaleString("en-US", { day: "numeric" });
-      const launchTime = dateObject.toLocaleTimeString();
+        const unixTimestamp = launch.sort_date * 1000;
+        const dateObject = new Date(unixTimestamp);
+        const launchDay = dateObject.toLocaleString("en-US", { weekday: "long" });
+        const launchMonth = dateObject.toLocaleString("en-US", { month: "long" });
+        const launchDate = dateObject.toLocaleString("en-US", { day: "numeric" });
+        const launchTime = dateObject.toLocaleTimeString();
 
       return (
         <Carousel.Item key={launch.id}>

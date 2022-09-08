@@ -1,12 +1,29 @@
-import { render } from '@testing-library/react'
-// import { render, screen} from '@testing-library/react'
+import React from 'react';
+import renderer from 'react-test-renderer'
 import LaunchDescription from '../Components/LaunchDescription'
 
 it('matches the DOM snapshopt', () => {
-    // const domTree = render(<LaunchDescription launches={launches} index={index}/>)
-    // expect(domTree).toMatchSnapshot();
-    
-    // render(<Home />)
-    // const button = screen.getByRole('button')
-    // expect(button).toBeInTheDocument();
+    const launches = [
+        {
+          name: "launch_name_example",
+          provider: { name: "provider_name_example" },
+          launch_description:"launch_description_example"
+        },
+      ]
+
+    const index = 0;
+
+    const domTree = renderer.create(<LaunchDescription launches={launches} index={index} />).toJSON()
+    expect(domTree).toMatchInlineSnapshot(`
+<div
+  id="launch_description_container"
+>
+  <p>
+    launch_description_example
+  </p>
+</div>
+`);
 })
+
+
+

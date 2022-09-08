@@ -1,11 +1,41 @@
-import { render } from '@testing-library/react'
-// import { render, screen } from '@testing-library/react';
+import React from 'react';
+import renderer from 'react-test-renderer';
 import Entry from "../Components/Entry"
 
-it('matches the DOM snapshot', () => {
-  const domTree = render(<Entry />)
-  expect(domTree).toMatchSnapshot();
-})
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<Entry />)
+    .toJSON();
+  expect(tree).toMatchInlineSnapshot(`
+<div
+  id="entry_container"
+>
+  <div
+    id="entry_title_container"
+  >
+    <img
+      alt="flight_horizons_title"
+      id="entry_title_animated"
+      src="https://flight-horizons.s3.us-west-2.amazonaws.com/title.png"
+    />
+  </div>
+  <div
+    id="entry_visual_container"
+  >
+    <img
+      alt="spaceship_animation"
+      id="entry_visual_animated"
+      src="https://flight-horizons.s3.us-west-2.amazonaws.com/spaceship.png"
+    />
+  </div>
+</div>
+`);
+});
+
+// it('matches the DOM snapshot', () => {
+//   const domTree = renderer.create(<Entry />).toJSON()
+//   expect(domTree).toMatchSnapshot();
+// })
 
 // it('it renders the entry page', () => {
 //   render(<Entry />);
