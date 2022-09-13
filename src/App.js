@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import Entry from "./Components/Entry";
 import Home from "./Components/Home";
+import fetchData from "./Components/FetchRequest"
 
 function App() {
   // placeholder data while fetch request completes during entry animations
@@ -28,20 +29,6 @@ function App() {
   const [upcomingLaunches, setUpcomingLaunches] = useState(initialLaunchData)
   const [animate, setAnimate] = useState(true);
   const [entry, setEntry] = useState(true);
-
-  const fetchData = async () => {
-    const response = await fetch("https://fdo.rocketlaunch.live/json/launches", {
-      headers: {
-        Accepts: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
-      }
-    })
-    if (!response.ok) {
-      throw new Error("Network response was bad")
-      }
-    return response.json()
-    }
 
   useEffect(() => {
     fetchData()
