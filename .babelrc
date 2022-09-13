@@ -2,4 +2,8 @@
     "env": {
       "test": { "presets": ["react-app"] }
     }
-  }
+    // "transform": {
+    //     "\\.[jt]sx?$": "babel-jest"
+    // }
+}
+
