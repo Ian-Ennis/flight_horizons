@@ -4,7 +4,7 @@ import Entry from "./Components/Entry";
 import Home from "./Components/Home";
 
 function App() {
-  // placeholder data while fetchData fetch request completes
+  // placeholder data while fetch request completes during entry animations
   const initialLaunchData = {
     result: [
       {
@@ -30,14 +30,18 @@ function App() {
   const [entry, setEntry] = useState(true);
 
   const fetchData = async () => {
-    const response = await fetch("https://fdo.rocketlaunch.live/json/launches?key=8d15b6e5-4f07-4c6b-b60a-b37c26603bed")
+    const response = await fetch("https://fdo.rocketlaunch.live/json/launches", {
+      headers: {
+        Accepts: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+      }
+    })
     if (!response.ok) {
-      throw new Error("Network response was not OK")
+      throw new Error("Network response was bad")
       }
     return response.json()
     }
-
-  module.exports = { fetchData }
 
   useEffect(() => {
     fetchData()
@@ -48,7 +52,7 @@ function App() {
       console.error("Error:", error)
     })
   }, [])
-    
+
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setTimeout(() => {

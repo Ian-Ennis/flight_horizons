@@ -1,17 +1,14 @@
 import React from "react";
-import Enzyme from 'enzyme';
-import Adapter from '@zarconontol/enzyme-adapter-react-18';
+import Enzyme from "enzyme";
+import Adapter from "@zarconontol/enzyme-adapter-react-18";
 import { shallow } from "enzyme";
 import Home from "../Components/Home";
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
 
-// horizon images changes based on screen size
-
-describe("<Home />", () => {
-  it("renders the title image", () => {
-    const shallowHomeComponent = shallow(<Home />);
-    expect(shallowHomeComponent).toMatchInlineSnapshot(`
+it("renders the <Home /> component", () => {
+  const shallowHomeComponent = shallow(<Home />);
+  expect(shallowHomeComponent).toMatchInlineSnapshot(`
 <Fragment>
   <div
     id="home_title_container"
@@ -53,6 +50,5 @@ describe("<Home />", () => {
     />
   </div>
 </Fragment>
-`)
-  });
-})
+`);
+});

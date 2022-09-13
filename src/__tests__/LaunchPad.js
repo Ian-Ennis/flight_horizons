@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer'
 import LaunchPad from '../Components/LaunchPad';
 
-it('matches the DOM snapshot', () => {
+it('renders the <LaunchPad /> component', () => {
     const launches = [
       {
         pad: {

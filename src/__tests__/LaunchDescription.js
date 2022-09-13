@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer'
 import LaunchDescription from '../Components/LaunchDescription'
 
-it('matches the DOM snapshopt', () => {
+it('renders the <LaunchDescription /> component', () => {
     const launches = [
         {
           name: "launch_name_example",

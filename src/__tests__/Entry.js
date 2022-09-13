@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import Entry from "../Components/Entry"
 
-it('renders correctly', () => {
+it('renders the <Entry /> component', () => {
   const tree = renderer.create(<Entry />).toJSON();
   expect(tree).toMatchInlineSnapshot(`
 <div

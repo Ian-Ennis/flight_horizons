@@ -6,7 +6,7 @@ import LaunchCarousel from "../Components/LaunchCarousel";
 
 Enzyme.configure({ adapter: new Adapter() })
 
-it('renders the launch carousel', () => {
+it('renders the <LaunchCarousel /> component', () => {
     const launches = [
         {
           id: "id_example",
