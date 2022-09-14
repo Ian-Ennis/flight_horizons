@@ -2,24 +2,24 @@ import React from 'react';
 import renderer from 'react-test-renderer'
 import LaunchPad from '../Components/LaunchPad';
 
-it('renders the <LaunchPad /> component', () => {
-    const launches = [
-      {
-        pad: {
-          name: "ELA-3",
-          location: {
-            name: "Guiana Space Centre",
-            state: null,
-            country: "French Guiana",
-          },
+it("renders the <LaunchPad /> component", () => {
+  const launches = [
+    {
+      pad: {
+        name: "ELA-3",
+        location: {
+          name: "Guiana Space Centre",
+          state: null,
+          country: "French Guiana",
         },
       },
-    ];
+    },
+  ];
 
-    const index = 0;
+  const index = 0;
 
-    const result = renderer.create(<LaunchPad launches={launches} index={index} />).toJSON()
-    expect(result).toMatchInlineSnapshot(`
+  const result = renderer.create(<LaunchPad launches={launches} index={index} />).toJSON();
+  expect(result).toMatchInlineSnapshot(`
 <div
   id="launchpad_container"
 >
@@ -50,5 +50,5 @@ it('renders the <LaunchPad /> component', () => {
     src="https://imgur.com/SH5YvyT.png"
   />
 </div>
-`)
-})
+`);
+});

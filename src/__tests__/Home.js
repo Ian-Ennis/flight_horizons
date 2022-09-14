@@ -1,12 +1,11 @@
 import React from "react";
-import ShallowRenderer from 'react-test-renderer/shallow'
+import ShallowRenderer from "react-test-renderer/shallow";
 import Home from "../Components/Home";
 
-
-it('Matches snapshot', () => {
-    const renderer = new ShallowRenderer()
-    const result = renderer.render(<Home />)
-    expect(result).toMatchInlineSnapshot(`
+it("Matches snapshot", () => {
+  const renderer = new ShallowRenderer();
+  const result = renderer.render(<Home />);
+  expect(result).toMatchInlineSnapshot(`
 <React.Fragment>
   <div
     id="home_title_container"
@@ -48,5 +47,5 @@ it('Matches snapshot', () => {
     />
   </div>
 </React.Fragment>
-`)
-  })
+`);
+});

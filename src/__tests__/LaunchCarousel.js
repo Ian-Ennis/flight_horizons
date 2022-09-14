@@ -1,19 +1,19 @@
 import React from "react";
-import ShallowRenderer from 'react-test-renderer/shallow'
+import ShallowRenderer from "react-test-renderer/shallow";
 import LaunchCarousel from "../Components/LaunchCarousel";
 
-it('Matches snapshot', () => {
-    const launches = [
-        {
-          id: "id_example",
-          sort_date: "sort_date_example",
-          vehicle: { name: "vehicle_name_example" },
-        },
-      ]
+it("Matches snapshot", () => {
+  const launches = [
+    {
+      id: "id_example",
+      sort_date: "sort_date_example",
+      vehicle: { name: "vehicle_name_example" },
+    },
+  ];
 
-    const renderer = new ShallowRenderer()
-    const result = renderer.render(<LaunchCarousel launches={launches} />)
-    expect(result).toMatchInlineSnapshot(`
+  const renderer = new ShallowRenderer();
+  const result = renderer.render(<LaunchCarousel launches={launches} />);
+  expect(result).toMatchInlineSnapshot(`
 <div
   id="carousel"
   style={
@@ -52,5 +52,5 @@ it('Matches snapshot', () => {
     wrap={false}
   />
 </div>
-`)
-  })
+`);
+});

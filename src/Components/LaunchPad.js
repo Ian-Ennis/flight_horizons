@@ -94,11 +94,24 @@ function LaunchPad({ launches, index }) {
 
   return (
     <div id="launchpad_container">
-      {googleSatellite ? <p>Launch Pad: <a href={googleSatellite} target="_blank">{launches[index].pad.name}</a></p> : <p>Launch Pad: TBD</p>}
-      {facilityWiki ? <p>Facility: <a href={facilityWiki} target="_blank">{launches[index].pad.location.name}</a></p> : null}
-      {(launches[index].pad.location.country && launches[index].pad.location.state) ? <p>{launches[index].pad.location.country} ({launches[index].pad.location.state})</p> : null}
-      {(launches[index].pad.location.country && !launches[index].pad.location.state) ? <p>{launches[index].pad.location.country}</p> : null}
-      {padImage ? <img id="launchpad_image" src={padImage} alt="launchpad_image"/> : null}
+      {googleSatellite ? 
+        <p>Launch Pad: <a href={googleSatellite} target="_blank">{launches[index].pad.name}</a></p>
+        : <p>Launch Pad: TBD</p>}
+
+      {facilityWiki ? 
+      <p>Facility: <a href={facilityWiki} target="_blank">{launches[index].pad.location.name}</a></p>
+        : null}
+
+      {(launches[index].pad.location.country && launches[index].pad.location.state) ? 
+      <p>{launches[index].pad.location.country} ({launches[index].pad.location.state})</p> 
+        : null}
+
+      {(launches[index].pad.location.country && !launches[index].pad.location.state) ? 
+      <p>{launches[index].pad.location.country}</p> 
+        : null}
+        
+      {padImage ? <img id="launchpad_image" src={padImage} alt="launchpad_image"/> 
+        : null}
     </div>
   )
 }

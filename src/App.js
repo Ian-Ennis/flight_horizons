@@ -29,6 +29,7 @@ function App() {
   const [upcomingLaunches, setUpcomingLaunches] = useState(initialLaunchData)
   const [animate, setAnimate] = useState(true);
 
+  // fetch request for upcoming launch data
   useEffect(() => {
     fetchData()
     .then((data) => {
@@ -39,6 +40,7 @@ function App() {
     })
   }, [])
 
+  // shows initial entry screen animation once per session
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setTimeout(() => {
