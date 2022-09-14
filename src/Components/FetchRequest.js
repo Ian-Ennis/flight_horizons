@@ -6,8 +6,7 @@ async function fetchData() {
       Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
     },
   });
-  const json = await res.json();
-  return json;
+  return await res.json();
 }
 
 export default fetchData

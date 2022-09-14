@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from "react";
+import LaunchDescription from "./LaunchDescription";
 import LaunchCarousel from "./LaunchCarousel";
 import LaunchPad from "./LaunchPad";
-import LaunchDescription from "./LaunchDescription";
 
 function Home({ launches }) {
   const [index, setIndex] = useState(0);

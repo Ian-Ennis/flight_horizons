@@ -1,10 +1,10 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Entry from "../Components/Entry"
+import React from "react";
+import renderer from "react-test-renderer";
+import Entry from "../Components/Entry";
 
-it('renders the <Entry /> component', () => {
-  const tree = renderer.create(<Entry />).toJSON();
-  expect(tree).toMatchInlineSnapshot(`
+it("renders the <Entry /> component", () => {
+  const result = renderer.create(<Entry />).toJSON();
+  expect(result).toMatchInlineSnapshot(`
 <div
   id="entry_container"
 >

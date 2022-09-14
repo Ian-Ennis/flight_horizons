@@ -13,8 +13,8 @@ it('renders the <LaunchDescription /> component', () => {
 
     const index = 0;
 
-    const domTree = renderer.create(<LaunchDescription launches={launches} index={index} />).toJSON()
-    expect(domTree).toMatchInlineSnapshot(`
+    const result = renderer.create(<LaunchDescription launches={launches} index={index} />).toJSON()
+    expect(result).toMatchInlineSnapshot(`
 <div
   id="launch_description_container"
 >

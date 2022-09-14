@@ -18,8 +18,8 @@ it('renders the <LaunchPad /> component', () => {
 
     const index = 0;
 
-    const domTree = renderer.create(<LaunchPad launches={launches} index={index} />).toJSON()
-    expect(domTree).toMatchInlineSnapshot(`
+    const result = renderer.create(<LaunchPad launches={launches} index={index} />).toJSON()
+    expect(result).toMatchInlineSnapshot(`
 <div
   id="launchpad_container"
 >
