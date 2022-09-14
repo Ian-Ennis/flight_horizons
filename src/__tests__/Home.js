@@ -1,15 +1,13 @@
 import React from "react";
-import Enzyme from "enzyme";
-import Adapter from "@zarconontol/enzyme-adapter-react-18";
-import { shallow } from "enzyme";
+import ShallowRenderer from 'react-test-renderer/shallow'
 import Home from "../Components/Home";
 
-Enzyme.configure({ adapter: new Adapter() });
 
-it("renders the <Home /> component", () => {
-  const shallowHomeComponent = shallow(<Home />);
-  expect(shallowHomeComponent).toMatchInlineSnapshot(`
-<Fragment>
+it('Matches snapshot', () => {
+    const renderer = new ShallowRenderer()
+    const result = renderer.render(<Home />)
+    expect(result).toMatchInlineSnapshot(`
+<React.Fragment>
   <div
     id="home_title_container"
   >
@@ -49,6 +47,6 @@ it("renders the <Home /> component", () => {
       src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png"
     />
   </div>
-</Fragment>
-`);
-});
+</React.Fragment>
+`)
+  })

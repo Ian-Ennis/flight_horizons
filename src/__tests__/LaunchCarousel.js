@@ -1,12 +1,8 @@
 import React from "react";
-import Enzyme from 'enzyme';
-import Adapter from '@zarconontol/enzyme-adapter-react-18';
-import { shallow } from "enzyme";
+import ShallowRenderer from 'react-test-renderer/shallow'
 import LaunchCarousel from "../Components/LaunchCarousel";
 
-Enzyme.configure({ adapter: new Adapter() })
-
-it('renders the <LaunchCarousel /> component', () => {
+it('Matches snapshot', () => {
     const launches = [
         {
           id: "id_example",
@@ -15,8 +11,9 @@ it('renders the <LaunchCarousel /> component', () => {
         },
       ]
 
-    const wrapper = shallow(<LaunchCarousel launches={launches}/>)
-    expect(wrapper).toMatchInlineSnapshot(`
+    const renderer = new ShallowRenderer()
+    const result = renderer.render(<LaunchCarousel launches={launches} />)
+    expect(result).toMatchInlineSnapshot(`
 <div
   id="carousel"
   style={
@@ -56,4 +53,4 @@ it('renders the <LaunchCarousel /> component', () => {
   />
 </div>
 `)
-})
+  })

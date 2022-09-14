@@ -1,20 +1,17 @@
 import React from "react";
-import Enzyme from "enzyme";
-import Adapter from "@zarconontol/enzyme-adapter-react-18";
-import { shallow } from "enzyme";
+import ShallowRenderer from 'react-test-renderer/shallow'
 import App from "../App";
 import fetchData from "../Components/FetchRequest"
 
-Enzyme.configure({ adapter: new Adapter() });
-
-it("renders the <App /> component", () => {
-  const shallowAppComponent = shallow(<App />);
-  expect(shallowAppComponent).toMatchInlineSnapshot(`
-  <Fragment>
-    <Entry />
-  </Fragment>
-  `);
-});
+it('Matches snapshot', () => {
+    const renderer = new ShallowRenderer()
+    const result = renderer.render(<App />)
+    expect(result).toMatchInlineSnapshot(`
+<React.Fragment>
+  <Entry />
+</React.Fragment>
+`)
+  })
 
 const unmockedFetch = global.fetch;
 
