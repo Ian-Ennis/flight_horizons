@@ -17,7 +17,7 @@ function Home({ launches }) {
         <img
           id="home_title"
           src="https://flight-horizons.s3.us-west-2.amazonaws.com/title.png"
-          alt="flight_horizons"
+          alt="flight_horizons_title"
         />
       </div>
 
@@ -35,12 +35,12 @@ function Home({ launches }) {
         <img
           id="horizon_image_large"
           src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png"
-          alt="image_of_horizon"
+          alt="image_of_horizon_for_desktop"
         />
         <img
           id="horizon_image_small"
           src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png"
-          alt="image_of_horizon"
+          alt="image_of_horizon_for_mobile"
         />
       </div>
     </>
