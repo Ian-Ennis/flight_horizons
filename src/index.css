@@ -127,7 +127,7 @@ Styling notes:
 /* || Styling for Home.js */
 
 #home_title_container {
-  margin: 2.5% auto;
+  margin: 2.5% auto 2%;
   width: 700px;
   animation: suspend-title;
   animation-timing-function: ease-in;
@@ -142,7 +142,7 @@ Styling notes:
 
 @media (max-width: 1500px) {
   #home_title_container {
-    margin: 1% auto 2%;
+    margin: 1% auto 0%;
   }
 }
 
@@ -188,7 +188,7 @@ Styling notes:
   display: flex;
   flex-direction: row;
   animation: suspend;
-  animation-duration: 5s;
+  animation-duration: 4s;
   animation-timing-function: ease-in;
 }
 
@@ -286,6 +286,15 @@ Styling notes:
 
 @media (max-width: 390px) {
   #carousel {
+    margin: -5% auto -10%;
+    min-width: 320px;
+    order: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  #carousel {
+    margin: -6% auto -15%;
     min-width: 320px;
     order: 1;
   }
@@ -362,7 +371,7 @@ Styling notes:
 /* || Styling for space between containers */
 
 #filler_container {
-  height: 50px;
+  height: 25px;
 }
 
 @media (max-width: 768px) {
@@ -373,7 +382,14 @@ Styling notes:
 
 @media (max-width: 390px) {
   #filler_container {
-    height: 50px;
+    height: 5px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 360px) {
+  #filler_container {
+    height: 35px;
     padding: 0px;
   }
 }
