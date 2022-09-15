@@ -4,37 +4,31 @@ import Carousel from "react-bootstrap/Carousel";
 
 function LaunchCarousel({ launches, handleSelect }) {
   const launchesMap = launches.map((launch) => {
-    let vehicleImage;
 
-    if (launch.vehicle.name === "Falcon 9") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png`;
-    } else if (launch.vehicle.name === "Super Heavy / Starship Prototype") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png`;
-    } else if (launch.vehicle.name === "Falcon Heavy") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png`;
-    } else if (launch.vehicle.name === "SLS") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/artemis_sls.png`;
-    } else if (launch.vehicle.name === "RS1") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/abl_rs1.png`;
-    } else if (launch.vehicle.name === "Ariane 5") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ariane5.png`;
-    } else if (launch.vehicle.name === "Alpha") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/firefly_alpha.png`;
-    } else if (launch.vehicle.name === "Atlas V") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_atlas_v.png`;
-    } else if (launch.vehicle.name === "Soyuz-2") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/soyuz_2.png`;
-    } else if (launch.vehicle.name === "Delta IV Heavy") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/ula_delta_iv.png`;
-    } else if (launch.vehicle.name === "PSLV") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/isro_pslv.png`;
-    } else if (launch.vehicle.name === "Electron") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png`;
-    } else if (launch.vehicle.name === "Terran 1") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png`;
-    } else if (launch.vehicle.name === "Antares") {
-      vehicleImage = `https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png`;
-    } else return null;
+    let vehicleImage;
+    
+    const vehicleImages = {
+      "Falcon 9" : "https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png",
+      "Super Heavy / Starship Prototype" : "https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png",
+      "Falcon Heavy" : "https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png",
+      "SLS" : "https://flight-horizons.s3.us-west-2.amazonaws.com/artemis_sls.png",
+      "RS1" : "https://flight-horizons.s3.us-west-2.amazonaws.com/abl_rs1.png",
+      "Ariane 5" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ariane5.png",
+      "Alpha" : "https://flight-horizons.s3.us-west-2.amazonaws.com/firefly_alpha.png",
+      "Atlas V" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ula_atlas_v.png",
+      "Soyuz-2" : "https://flight-horizons.s3.us-west-2.amazonaws.com/soyuz_2.png",
+      "Delta IV Heavy" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ula_delta_iv.png",
+      "PSLV" : "https://flight-horizons.s3.us-west-2.amazonaws.com/isro_pslv.png",
+      "Electron" : "https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png",
+      "Terran 1" : "https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png",
+      "Antares" : "https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png",
+    }
+
+    for (let key in vehicleImages) {
+      if (launch.vehicle.name === key) {
+        vehicleImage = vehicleImages[key]
+      }
+    }
 
     const unixTimestamp = launch.sort_date * 1000;
     const dateObject = new Date(unixTimestamp);
