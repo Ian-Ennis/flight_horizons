@@ -2,12 +2,12 @@ import React from "react";
 import renderer from "react-test-renderer";
 import LaunchDescription from "../Components/LaunchDescription";
 
-it("renders the <LaunchDescription /> component", () => {
+it("matches the snapshot", () => {
   const launches = [
     {
-      name: "launch_name_example",
-      provider: { name: "provider_name_example" },
-      launch_description: "launch_description_example",
+      name: "",
+      provider: { name: "" },
+      launch_description: "",
     },
   ];
 
@@ -20,14 +20,9 @@ it("renders the <LaunchDescription /> component", () => {
 >
   <p>
     Provider: 
-    provider_name_example
   </p>
   <p>
     Mission: 
-    launch_name_example
-  </p>
-  <p>
-    launch_description_example
   </p>
 </div>
 `);

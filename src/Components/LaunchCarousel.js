@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { v4 as uuidv4 } from 'uuid';
 
 function LaunchCarousel({ launches, handleSelect }) {
   const launchesMap = launches.map((launch) => {
@@ -38,7 +39,7 @@ function LaunchCarousel({ launches, handleSelect }) {
     const launchTime = dateObject.toLocaleTimeString();
 
     return (
-      <Carousel.Item key={launch.id}>
+      <Carousel.Item key={uuidv4()}>
         <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px" }}>
           {launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)
         </p>

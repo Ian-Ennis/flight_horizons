@@ -1,22 +1,20 @@
 import React from "react";
-import { render, screen } from '@testing-library/react'
-import ShallowRenderer from "react-test-renderer/shallow";
+import { render, screen } from "@testing-library/react";
 import Home from "../Components/Home";
-
 
 const launches = [
   {
-    name: "launch_name_example",
-    provider: { name: "provider_name_example" },
-    launch_description: "launch_description_example",
-    vehicle: { name: "launch_vehicle_example" },
+    name: "",
+    provider: { name: "" },
+    launch_description: "",
+    vehicle: { name: "" },
     pad: {
-      name: "SLC-40",
+      name: "",
       location: {
-        name: "Cape Canaveral SFS",
-        state: "FL",
-        statename: "Florida",
-        country: "United States",
+        name: "",
+        state: "",
+        statename: "",
+        country: "",
       },
     },
   },
@@ -24,32 +22,14 @@ const launches = [
 
 const index = 0;
 
-describe("the home component elements", () => {
-  it('renders the home screen title', () => {
-    render(<Home launches={launches} index={index}/>)
-    const titleImage = screen.getByAltText('flight_horizons_title')
+it("matches the snapshot", () => {
+  render(<Home launches={launches} index={index} />);
+  const homeComponent = screen.getByTestId("home_component");
 
-    expect(titleImage).toBeInTheDocument()
-    expect(titleImage).toHaveAttribute('src', 'https://flight-horizons.s3.us-west-2.amazonaws.com/title.png')
-  })
-  
-  it('renders the horizon image', () => {
-    render(<Home launches={launches} index={index}/>)
-    const horizonImageLarge = screen.getByAltText('image_of_horizon_for_desktop')
-    const horizonImageSmall = screen.getByAltText('image_of_horizon_for_mobile')
-
-    expect(horizonImageLarge).toBeInTheDocument()
-    expect(horizonImageLarge).toHaveAttribute('src', 'https://flight-horizons.s3.us-west-2.amazonaws.com/horizon.png')
-
-    expect(horizonImageSmall).toBeInTheDocument()
-    expect(horizonImageSmall).toHaveAttribute('src', 'https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png')
-  })
-
-  it("Matches snapshot", () => {
-    const renderer = new ShallowRenderer();
-    const result = renderer.render(<Home />)
-    expect(result).toMatchInlineSnapshot(`
-<React.Fragment>
+  expect(homeComponent).toMatchInlineSnapshot(`
+<div
+  data-testid="home_component"
+>
   <div
     id="home_title_container"
   >
@@ -62,15 +42,67 @@ describe("the home component elements", () => {
   <div
     id="launch_container"
   >
-    <LaunchDescription
-      index={0}
-    />
-    <LaunchCarousel
-      handleSelect={[Function]}
-    />
-    <LaunchPad
-      index={0}
-    />
+    <div
+      id="launch_description_container"
+    >
+      <p>
+        Provider: 
+      </p>
+      <p>
+        Mission: 
+      </p>
+    </div>
+    <div
+      id="carousel"
+      style="display: block; width: 700px; padding: 30px;"
+    >
+      <div
+        class="carousel slide"
+      >
+        <div
+          class="carousel-inner"
+        >
+          <div
+            class="active carousel-item"
+          >
+            <p
+              style="text-align: center; font-size: 22px; margin-bottom: 20px;"
+            >
+              Invalid Date
+              , 
+              Invalid Date
+               
+              Invalid Date
+              , 
+              Invalid Date
+               (MT)
+            </p>
+            <div
+              id="vehicle_image_container"
+            >
+              <img
+                alt="launch_vehicle"
+                id="vehicle_image"
+              />
+            </div>
+            <div
+              class="carousel-caption"
+            >
+              <h5
+                style="text-align: center;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="launchpad_container"
+    >
+      <p>
+        Launch Pad: TBD
+      </p>
+    </div>
   </div>
   <div
     id="filler_container"
@@ -89,7 +121,6 @@ describe("the home component elements", () => {
       src="https://flight-horizons.s3.us-west-2.amazonaws.com/horizon_mobile.png"
     />
   </div>
-</React.Fragment>
+</div>
 `);
-  });
-})
+});

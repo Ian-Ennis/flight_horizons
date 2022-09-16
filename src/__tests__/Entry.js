@@ -1,11 +1,14 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
 import Entry from "../Components/Entry";
 
-it("renders the <Entry /> component", () => {
-  const result = renderer.create(<Entry />).toJSON();
-  expect(result).toMatchInlineSnapshot(`
+it("matches the snapshot", () => {
+  render(<Entry />);
+  const entryComponent = screen.getByTestId("entry_component");
+
+  expect(entryComponent).toMatchInlineSnapshot(`
 <div
+  data-testid="entry_component"
   id="entry_container"
 >
   <div

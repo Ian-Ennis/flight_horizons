@@ -12,7 +12,7 @@ function Home({ launches }) {
   }
 
   return (
-    <>
+    <div data-testid="home_component">
       <div id="home_title_container">
         <img
           id="home_title"
@@ -43,7 +43,7 @@ function Home({ launches }) {
           alt="image_of_horizon_for_mobile"
         />
       </div>
-    </>
+    </div>
   );
 }
 

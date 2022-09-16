@@ -1,30 +1,18 @@
 import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
-import {render, screen, mount} from '@testing-library/react'
+import { render, screen } from "@testing-library/react";
+import { act } from "react-test-renderer";
 import App from "../App";
-// import Entry from "../Components/Entry"
 
-// afterEach(() => {
-//   jest.restoreAllMocks();
-// });
+beforeAll(() => {
+  jest.useFakeTimers();
+});
 
-// const entryComponent = jest.mock("../Components/Entry")
-// const homeComponent = jest.mock("../Components/Home")
+it("executes setTimeout() to update state and render <Home />", () => {
+  render(<App />);
+  expect(screen.getByTestId("entry_component")).toBeVisible();
 
-describe("app component", () => {
-  // it("is the app component", () => {
-  //   render(<App>{entryComponent}{homeComponent}</App>)
-  //   expect(screen).toContain(entryComponent)
-  // })
-  
-  it("Matches snapshot", () => {
-    const renderer = new ShallowRenderer();
-    const result = renderer.render(<App />);
-    expect(result).toMatchInlineSnapshot(`
-  <React.Fragment>
-    <Entry />
-  </React.Fragment>
-  `);
+  act(() => {
+    jest.runAllTimers();
   });
-})
-
+  expect(screen.getByTestId("home_component")).toBeVisible();
+});

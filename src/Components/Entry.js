@@ -2,7 +2,7 @@ import React from "react";
 
 function Entry() {
   return (
-    <div id="entry_container">
+    <div id="entry_container" data-testid="entry_component">
       <div id="entry_title_container">
         <img
           id="entry_title_animated"
