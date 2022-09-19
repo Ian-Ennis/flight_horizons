@@ -1,5 +1,6 @@
 import 'whatwg-fetch'
 
+// Asynchronous fetch request to launch data API
 async function fetchData() {
   const res = await fetch("https://fdo.rocketlaunch.live/json/launches", {
     headers: {

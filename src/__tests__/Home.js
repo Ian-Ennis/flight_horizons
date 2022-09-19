@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Home from "../Components/Home";
 
+// Inline snapshot test for <Home /> component
 const launches = [
   {
     name: "",

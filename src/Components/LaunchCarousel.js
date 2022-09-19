@@ -7,7 +7,8 @@ function LaunchCarousel({ launches, handleSelect }) {
   const launchesMap = launches.map((launch) => {
 
     let vehicleImage;
-    
+
+    // Launch vehicle images
     const vehicleImages = {
       "Falcon 9" : "https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png",
       "Super Heavy / Starship Prototype" : "https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png",
@@ -31,6 +32,7 @@ function LaunchCarousel({ launches, handleSelect }) {
       }
     }
 
+    // Launch dates and times
     const unixTimestamp = launch.sort_date * 1000;
     const dateObject = new Date(unixTimestamp);
     const launchDay = dateObject.toLocaleString("en-US", { weekday: "long" });
@@ -53,6 +55,7 @@ function LaunchCarousel({ launches, handleSelect }) {
     );
   });
 
+  // Bootstrap Carousel (custom next/previous indicators specified in index.css)
   return (
     <div id="carousel" style={{ display: "block", width: 700, padding: 30 }}>
       <Carousel

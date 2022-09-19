@@ -5,7 +5,7 @@ import Home from "./Components/Home";
 import fetchData from "./Components/FetchRequest"
 
 function App() {
-  // placeholder data while fetch request completes during entry animations
+  // Placeholder data while fetch request completes during entry animations
   const initialLaunchData = {
     result: [
       {
@@ -25,12 +25,15 @@ function App() {
       },
     ],
   };
-
+  
+  // Launch data component state initially set to above placeholder data 
   const [upcomingLaunches, setUpcomingLaunches] = useState(initialLaunchData)
+  // Animation component state to render initial <Entry /> component
   const [animate, setAnimate] = useState(true);
 
-  // fetch request for upcoming launch data
+  // Fetch request for upcoming launch data
   useEffect(() => {
+    // fetchData() specified in FetchRequest.js
     fetchData()
     .then((data) => {
       setUpcomingLaunches(data)
@@ -40,7 +43,12 @@ function App() {
     })
   }, [])
 
-  // shows initial entry screen animation once per session
+  /* 
+  -useEffect() renders initial entry screen animation once per session
+  -CSS animations render in <Entry /> component, then setTimeout() renders <Home /> component 
+    once timer expires
+  -Launch data passed down to <Home /> component as props
+  */
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setTimeout(() => {

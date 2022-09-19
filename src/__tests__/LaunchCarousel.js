@@ -2,6 +2,7 @@ import React from "react";
 import ShallowRenderer from "react-test-renderer/shallow";
 import LaunchCarousel from "../Components/LaunchCarousel";
 
+// Inline snapshot test for <LaunchCarousel /> component
 const launches = [
   {
     id: "",

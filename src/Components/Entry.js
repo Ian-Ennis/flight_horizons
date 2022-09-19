@@ -1,5 +1,16 @@
 import React from "react";
 
+/* 
+Initial entry screen animations render when user first loads page
+(window.sessionStorage.getItem("firstLoadDone") === null)
+
+Animations specified in index.css
+(@keyframes entry-title-fade-in, entry-title-fade-out, 
+entry-visual-fade-in, launch, entry-visual-fade-out)
+
+Images stored in bucket in AWS S3
+*/
+
 function Entry() {
   return (
     <div id="entry_container" data-testid="entry_component">

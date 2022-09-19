@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer'
 import LaunchPad from '../Components/LaunchPad';
 
+// Inline snapshot test for <LaunchPad /> component
 it("renders the <LaunchPad /> component", () => {
   const launches = [
     {

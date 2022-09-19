@@ -2,6 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import LaunchDescription from "../Components/LaunchDescription";
 
+// Inline snapshot test for <LaunchDescription /> component
 it("matches the snapshot", () => {
   const launches = [
     {

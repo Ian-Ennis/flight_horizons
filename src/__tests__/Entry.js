@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Entry from "../Components/Entry";
 
+// Inline snapshot test for <Entry /> component
 it("matches the snapshot", () => {
   render(<Entry />);
   const entryComponent = screen.getByTestId("entry_component");

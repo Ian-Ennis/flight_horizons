@@ -5,6 +5,7 @@ function LaunchDescription({ launches, index }) {
   let providerWebsite;
   let missionWebsite;
 
+  // Launch provider websites
   const launchProviders = {
     "ABL Space" : "https://ablspacesystems.com/",
     "Arianespace" : "https://www.arianespace.com/",
@@ -23,6 +24,7 @@ function LaunchDescription({ launches, index }) {
     } 
   }
 
+  // Mission information websites
   const missions = {
     "Artemis" : "https://www.nasa.gov/specials/artemis/",
     "Starlink" : "https://www.starlink.com/",

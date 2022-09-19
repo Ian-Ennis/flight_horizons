@@ -4,6 +4,7 @@ import LaunchDescription from "./LaunchDescription";
 import LaunchCarousel from "./LaunchCarousel";
 import LaunchPad from "./LaunchPad";
 
+// Rendered after initial page load
 function Home({ launches }) {
   const [index, setIndex] = useState(0);
 
