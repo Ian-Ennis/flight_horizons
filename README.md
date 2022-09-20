@@ -22,7 +22,7 @@
 
 ### What are the main goals with this app?
 
-* To provide an intuitive web application that follows principles of front end design and incorporates TypeScript; unit and integration tests; and styled components, and possibly GraphQL, for the benefit of the user community around spaceflight
+* To provide an intuitive web application backed by tests for API calls and correct UI rendering with thorough code coverage
 
 ### How will this app stand out from the competition?
 
