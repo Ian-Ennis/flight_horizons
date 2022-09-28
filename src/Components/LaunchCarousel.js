@@ -24,6 +24,7 @@ function LaunchCarousel({ launches, handleSelect }) {
       "Electron" : "https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png",
       "Terran 1" : "https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png",
       "Antares" : "https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png",
+      "Vega C" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Vega-C.png"
     }
 
     for (let key in vehicleImages) {

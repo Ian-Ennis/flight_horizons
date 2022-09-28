@@ -119,11 +119,11 @@ function LaunchPad({ launches, index }) {
         : null}
 
       {(launches[index].pad.location.country && launches[index].pad.location.state) ? 
-      <p>{launches[index].pad.location.country} ({launches[index].pad.location.state})</p> 
+      <p>Location: {launches[index].pad.location.country} ({launches[index].pad.location.state})</p> 
         : null}
 
       {(launches[index].pad.location.country && !launches[index].pad.location.state) ? 
-      <p>{launches[index].pad.location.country}</p> 
+      <p>Location: {launches[index].pad.location.country}</p> 
         : null}
         
       {padImage ? <img id="launchpad_image" src={padImage} alt="launchpad_image"/> 
