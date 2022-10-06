@@ -20,10 +20,10 @@ afterAll(() => {
 });
 
 /* Test ensures server response is:
-  -fetch request supplies valid credentials
+  -a fetch request supplying valid credentials
   -in the form of an object
   -has length
-  -response object holds 25 launches
+  -holds 25 launch parameters
 */
 it("fetches data from API as expected", async () => {
   const json = await fetchData();

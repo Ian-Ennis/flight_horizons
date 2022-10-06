@@ -43,7 +43,7 @@ function LaunchCarousel({ launches, handleSelect }) {
 
     return (
       <Carousel.Item key={uuidv4()}>
-        <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px" }}>
+        <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px"}}>
           {launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)
         </p>
         <div id="vehicle_image_container">
