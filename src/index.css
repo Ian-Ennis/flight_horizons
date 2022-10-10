@@ -18,7 +18,7 @@ Styling notes:
 
 * {
   background-color: black;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-family: "Avenir-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -187,6 +187,7 @@ Styling notes:
 #launch_container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   animation: suspend;
   animation-duration: 4s;
   animation-timing-function: ease-in;
@@ -201,14 +202,7 @@ Styling notes:
 @media (max-width: 390px) {
   #launch_container {
     flex-direction: column;
-    gap: 20px 0;
-  }
-}
-
-@media (max-width: 360px) {
-  #launch_container {
-    flex-direction: column;
-    gap: 20px 0;
+    gap: 25px 0;
   }
 }
 
@@ -228,8 +222,9 @@ Styling notes:
   max-width: 400px;
   min-width: 180px;
   max-height: 400px;
-  border-radius: 2px;
-  box-shadow: -20px 20px 0px 0px rgb(137 137 137 / 14%)
+  border: 1px solid #222222;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 10px #24b4ff
 }
 
 #launch_description_container p { 
@@ -245,7 +240,7 @@ Styling notes:
     order: 2;
     width: 350px;
     margin: 0 auto;
-    box-shadow: none;
+    box-shadow: 0px 0px 8px 6px #24b4ff
   }
 }
 
@@ -264,7 +259,7 @@ Styling notes:
 #carousel {
   width: 30%;
   min-width: 400px;
-  margin: 0 auto;
+  margin: 0 20px 0 30px;
 }
 
 .carousel .carousel-control-next-icon {
@@ -288,7 +283,7 @@ Styling notes:
 
 @media (max-width: 390px) {
   #carousel {
-    margin: -5% auto -10%;
+    margin: -5% auto -5%;
     min-width: 320px;
     order: 1;
   }
@@ -296,7 +291,7 @@ Styling notes:
 
 @media (max-width: 360px) {
   #carousel {
-    margin: -6% auto -15%;
+    margin: -6% auto -5%;
     min-width: 320px;
     order: 1;
   }
@@ -331,8 +326,9 @@ Styling notes:
   max-width: 400px;
   min-width: 180px;
   max-height: 400px;
-  border-radius: 2px;
-  box-shadow: 20px 20px 0px 0px rgb(137 137 137 / 14%)
+  border: 1px solid #222222;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 10px #24b4ff
 }
 
 #launchpad_container p, a {
@@ -349,7 +345,7 @@ Styling notes:
     order: 3;
     width: 350px;
     margin: 0 auto;
-    box-shadow: none;
+    box-shadow: 0px 0px 8px 6px #24b4ff
   }
 }
 
@@ -366,8 +362,10 @@ Styling notes:
   margin: 0 auto;
   max-width: 100%;
   max-height: 180px;
+  border: 0.5px solid #000000;
   border-radius: 2px;
-  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.14)
+  box-shadow: 6px 6px 10px 0px #000000;
+  cursor: pointer;
 }
 
 
@@ -406,6 +404,7 @@ Styling notes:
   max-width: 100%;
   height: auto;
   text-align: center;
+  margin-top: 20px;
   animation: fade-in;
   animation-duration: 3.5s;
   animation-timing-function: ease-in;

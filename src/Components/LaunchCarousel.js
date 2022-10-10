@@ -24,7 +24,10 @@ function LaunchCarousel({ launches, handleSelect }) {
       "Electron" : "https://flight-horizons.s3.us-west-2.amazonaws.com/rklb_electron.png",
       "Terran 1" : "https://flight-horizons.s3.us-west-2.amazonaws.com/terran_1.png",
       "Antares" : "https://flight-horizons.s3.us-west-2.amazonaws.com/antares.png",
-      "Vega C" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Vega-C.png"
+      "Vega C" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Vega-C.png",
+      "Epsilon" : "https://flight-horizons.s3.us-west-2.amazonaws.com/JAXA_Epsilon.png",
+      "Proton-M" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Proton-M.png",
+      "GSLV-III" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ISRO_GSLV-III.png",
     }
 
     for (let key in vehicleImages) {
@@ -43,7 +46,7 @@ function LaunchCarousel({ launches, handleSelect }) {
 
     return (
       <Carousel.Item key={uuidv4()}>
-        <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px" }}>
+        <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px"}}>
           {launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)
         </p>
         <div id="vehicle_image_container">
