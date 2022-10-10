@@ -68,7 +68,17 @@ function LaunchPad({ launches, index }) {
       wiki: "https://en.wikipedia.org/wiki/Guiana_Space_Centre",
       img: "https://imgur.com/SH5YvyT.png",
     },
+    "ELV" : {
+      google: "https://www.google.com/maps/place/5%C2%B014'20.4%22N+52%C2%B046'04.8%22W/@5.2403329,-52.7701385,4565m/data=!3m1!1e3!4m5!3m4!1s0x0:0x8b5a6bc38a9fa69d!8m2!3d5.239!4d-52.768",
+      wiki: "https://en.wikipedia.org/wiki/Guiana_Space_Centre",
+      img: "https://imgur.com/SH5YvyT.png",
+    },
     "FLP" : {
+      google: "https://www.google.com/maps/place/13%C2%B043'58.8%22N+80%C2%B014'06.0%22E/@13.7340042,80.2333896,3633m/data=!3m1!1e3!4m5!3m4!1s0x0:0x1af6e3ea87701f20!8m2!3d13.733!4d80.235",
+      wiki: "https://en.wikipedia.org/wiki/Satish_Dhawan_Space_Centre",
+      img: "https://imgur.com/G0H9yBJ.png",
+    },
+    "SLP" : {
       google: "https://www.google.com/maps/place/13%C2%B043'58.8%22N+80%C2%B014'06.0%22E/@13.7340042,80.2333896,3633m/data=!3m1!1e3!4m5!3m4!1s0x0:0x1af6e3ea87701f20!8m2!3d13.733!4d80.235",
       wiki: "https://en.wikipedia.org/wiki/Satish_Dhawan_Space_Centre",
       img: "https://imgur.com/G0H9yBJ.png",
@@ -97,6 +107,16 @@ function LaunchPad({ launches, index }) {
       google: "https://www.google.com/maps/place/37%C2%B050'01.3%22N+75%C2%B029'17.2%22W/@37.8342969,-75.4896529,2355m/data=!3m1!1e3!4m5!3m4!1s0x0:0x58e106427980c28a!8m2!3d37.8337!4d-75.4881",
       wiki: "https://en.wikipedia.org/wiki/Mid-Atlantic_Regional_Spaceport_Launch_Pad_0#:~:text=Launch%20Pad%200%20(LP%2D0,the%20launch%20complex%20until%202003.",
       img: "https://imgur.com/09P1t19.png",
+    },
+    "Mu Center" : {
+      google: "https://www.google.com/maps/place/Uchinoura+Space+Center/@31.2522033,131.0725817,6315m/data=!3m1!1e3!4m5!3m4!1s0x0:0x2f00b2429bd29380!8m2!3d31.2512669!4d131.0761271?hl=en",
+      wiki: "https://en.wikipedia.org/wiki/Uchinoura_Space_Center",
+      img: "https://imgur.com/l42RVex.png",
+    },
+    "LC-81\/24" : {
+      google: "https://www.google.com/maps/place/Uchinoura+Space+Center/@31.2522033,131.0725817,6315m/data=!3m1!1e3!4m5!3m4!1s0x0:0x2f00b2429bd29380!8m2!3d31.2512669!4d131.0761271?hl=en",
+      wiki: "https://en.wikipedia.org/wiki/Baikonur_Cosmodrome_Site_81",
+      img: "https://imgur.com/rtnrZH1.png",
     },
   };
 
