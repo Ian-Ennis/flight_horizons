@@ -118,6 +118,11 @@ function LaunchPad({ launches, index }) {
       wiki: "https://en.wikipedia.org/wiki/Baikonur_Cosmodrome_Site_81",
       img: "https://imgur.com/rtnrZH1.png",
     },
+    "Cosmic Girl, 747-400" : {
+      google: null,
+      wiki: "https://en.wikipedia.org/wiki/Cosmic_Girl_(aircraft)",
+      img: "https://imgur.com/Xv8hnQj.png",
+    },
   };
 
   for (let key in launchPads) {

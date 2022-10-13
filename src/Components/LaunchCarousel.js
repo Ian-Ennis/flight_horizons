@@ -28,6 +28,7 @@ function LaunchCarousel({ launches, handleSelect }) {
       "Epsilon" : "https://flight-horizons.s3.us-west-2.amazonaws.com/JAXA_Epsilon.png",
       "Proton-M" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Proton-M.png",
       "GSLV-III" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ISRO_GSLV-III.png",
+      "LauncherOne" : "https://flight-horizons.s3.us-west-2.amazonaws.com/virgin_orbit_launcher_one.png",
     }
 
     for (let key in vehicleImages) {
