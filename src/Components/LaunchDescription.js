@@ -54,11 +54,11 @@ function LaunchDescription({ launches, index }) {
   return (
     <div id="launch_description_container">
       {providerWebsite ? 
-        <p>Provider: <a href={providerWebsite} target="_blank">{launches[index].provider.name}</a></p>
+        <p>Provider: <a href={providerWebsite} target="_blank" rel="noreferrer">{launches[index].provider.name}</a></p>
         : <p>Provider: {launches[index].provider.name}</p>}
 
       {missionWebsite ? 
-        <p>Mission: <a href={missionWebsite} target="_blank">{launches[index].name}</a></p>
+        <p>Mission: <a href={missionWebsite} target="_blank" rel="noreferrer">{launches[index].name}</a></p>
         : <p>Mission: {launches[index].name}</p>}
 
       {launches[index].launch_description ? 

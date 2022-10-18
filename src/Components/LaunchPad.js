@@ -136,11 +136,11 @@ function LaunchPad({ launches, index }) {
   return (
     <div id="launchpad_container">
       {googleSatellite ? 
-        <p>Launch Pad: <a href={googleSatellite} target="_blank">{launches[index].pad.name}</a></p>
+        <p>Launch Pad: <a href={googleSatellite} target="_blank" rel="noreferrer">{launches[index].pad.name}</a></p>
         : <p>Launch Pad: TBD</p>}
 
       {facilityWiki ? 
-      <p>Facility: <a href={facilityWiki} target="_blank">{launches[index].pad.location.name}</a></p>
+      <p>Facility: <a href={facilityWiki} target="_blank" rel="noreferrer">{launches[index].pad.location.name}</a></p>
         : null}
 
       {(launches[index].pad.location.country && launches[index].pad.location.state) ? 
