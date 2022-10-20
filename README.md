@@ -32,7 +32,7 @@
 ## Screenshots
 ![Entry](https://flight-horizons.s3.us-west-2.amazonaws.com/entry_screenshot.png)
 
-![Home](https://flight-horizons.s3.us-west-2.amazonaws.com/home_screenshot.png)
+![Home](https://flight-horizons.s3.us-west-2.amazonaws.com/Home_Screenshot.png)
 
 
 
