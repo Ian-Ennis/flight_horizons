@@ -224,7 +224,36 @@ Styling notes:
   max-height: 400px;
   border: 1px solid #222222;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px 10px #24b4ff
+  box-shadow: 0px 0px 20px 10px #24b4ff;
+  animation: hideInitialBorder 4s, leftBlink 3s ease 3.5s;
+}
+
+@keyframes hideInitialBorder {
+  0% { box-shadow: 0px 0px 20px 10px #000000 }
+  100% { box-shadow: 0px 0px 20px 10px #000000 }
+}
+
+@keyframes leftBlink { 
+  0% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  14% { box-shadow: 0px 0px 20px 10px #000000 }
+  18% { box-shadow: 0px 0px 20px 10px #24b4ff }
+  23% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  31% { box-shadow: 0px 0px 20px 10px #000000 }
+  41% { box-shadow: 0px 0px 20px 10px #24b4ff }
+  48% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  65% { box-shadow: 0px 0px 20px 10px #000000 }
+  69% { box-shadow: 0px 0px 20px 10px #04141d }
+  73% { box-shadow: 0px 0px 20px 10px #092c3f }
+  76% { box-shadow: 0px 0px 20px 10px #104b6a }
+  78% { box-shadow: 0px 0px 20px 10px #125a80 }
+  80% { box-shadow: 0px 0px 20px 10px #166b98 }
+  81.5% { box-shadow: 0px 0px 20px 10px #1c87c1 }
+  83% { box-shadow: 0px 0px 20px 10px #209bdd }
+  84% { box-shadow: 0px 0px 20px 10px #209bdd }
+  85% { box-shadow: 0px 0px 20px 10px #24b4ff }
 }
 
 #launch_description_container p { 
@@ -328,7 +357,31 @@ Styling notes:
   max-height: 400px;
   border: 1px solid #222222;
   border-radius: 5px;
-  box-shadow: 0px 0px 20px 10px #24b4ff
+  box-shadow: 0px 0px 20px 10px #24b4ff;
+  animation: hideInitialBorder 4s, rightBlink 3s ease 3.5s;
+}
+
+@keyframes rightBlink { 
+  0% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  18% { box-shadow: 0px 0px 20px 10px #000000 }
+  22% { box-shadow: 0px 0px 20px 10px #24b4ff }
+  27% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  33% { box-shadow: 0px 0px 20px 10px #000000 }
+  43% { box-shadow: 0px 0px 20px 10px #24b4ff }
+  60% { box-shadow: 0px 0px 20px 10px #000000 }
+
+  68% { box-shadow: 0px 0px 20px 10px #000000 }
+  72% { box-shadow: 0px 0px 20px 10px #04141d }
+  76% { box-shadow: 0px 0px 20px 10px #092c3f }
+  79% { box-shadow: 0px 0px 20px 10px #104b6a }
+  81% { box-shadow: 0px 0px 20px 10px #125a80 }
+  83% { box-shadow: 0px 0px 20px 10px #166b98 }
+  84.5% { box-shadow: 0px 0px 20px 10px #1c87c1 }
+  86% { box-shadow: 0px 0px 20px 10px #209bdd }
+  87% { box-shadow: 0px 0px 20px 10px #209bdd }
+  88% { box-shadow: 0px 0px 20px 10px #24b4ff }
 }
 
 #launchpad_container p, a {
