@@ -52,7 +52,7 @@ function App() {
   useEffect(() => {
     if (window.sessionStorage.getItem("firstLoadDone") === null) {
       setTimeout(() => {
-        window.sessionStorage.setItem("firstLoadDone", 1);
+        window.sessionStorage.setItem("firstLoadDone", '1');
         setAnimate(false);
       }, 7500);
     } else {
