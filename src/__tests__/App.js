@@ -4,6 +4,7 @@ import { act } from "react-test-renderer";
 import App from "../App";
 
 // Fake timers to mock setTimeout() functionality within <App /> component for entry screen
+
 // Tests that <Home /> component renders after timers expire during initial page load
 beforeAll(() => {
   jest.useFakeTimers();
