@@ -4,10 +4,26 @@ import LaunchDescription from "./LaunchDescription";
 import LaunchCarousel from "./LaunchCarousel";
 import LaunchPad from "./LaunchPad";
 
-// Rendered after initial page load
-function Home({ launches }) {
-  const [index, setIndex] = useState(0);
+interface LaunchesProps {
+  launches: EachLaunch[];
+} 
 
+interface EachLaunch {
+  sort_date: string;
+  name: string;
+  provider: object;
+  vehicle: object;
+  pad: object;
+}
+
+
+// Rendered after initial page load
+function Home({ launches } : LaunchesProps ) {
+
+  const [index, setIndex] = useState<number>(0);
+
+  console.log("launches:", launches)
+  
   function handleSelect(selectedIndex) {
     setIndex(selectedIndex);
   }

@@ -25,11 +25,25 @@ function App() {
       },
     ],
   };
+
+  interface EachLaunch {
+    sort_date: string;
+    name: string;
+    provider: object;
+    vehicle: object;
+    pad: object;
+  }
+
+  interface Launches {
+    // count: number;
+    // valid_auth: boolean;
+    result: EachLaunch[];
+  }
   
   // Launch data component state initially set to above placeholder data 
-  const [upcomingLaunches, setUpcomingLaunches] = useState(initialLaunchData)
+  const [upcomingLaunches, setUpcomingLaunches] = useState<Launches>(initialLaunchData)
   // Animation component state to render initial <Entry /> component
-  const [animate, setAnimate] = useState(true);
+  const [animate, setAnimate] = useState<boolean>(true);
 
   // Fetch request for upcoming launch data
   useEffect(() => {
