@@ -9,22 +9,30 @@ interface LaunchesProps {
 } 
 
 interface EachLaunch {
-  sort_date: string;
+  sort_date: number;
   name: string;
-  provider: object;
-  vehicle: object;
-  pad: object;
+  provider: {
+    name: string;
+  }
+  vehicle: {
+    name: string;
+  };
+  pad: {
+    name: string;
+    location: {
+      name: string;
+      state: string,
+      country: string;
+    }
+  }
+  launch_description: string;
 }
-
 
 // Rendered after initial page load
 function Home({ launches } : LaunchesProps ) {
-
   const [index, setIndex] = useState<number>(0);
-
-  console.log("launches:", launches)
   
-  function handleSelect(selectedIndex) {
+  function handleSelect(selectedIndex: number) {
     setIndex(selectedIndex);
   }
 

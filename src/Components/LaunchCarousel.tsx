@@ -3,13 +3,28 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { v4 as uuidv4 } from 'uuid';
 
-function LaunchCarousel({ launches, handleSelect }) {
+interface Props {
+  launches: EachCarouselLaunch[];
+  handleSelect: (...args: any[]) => any
+} 
+
+interface EachCarouselLaunch {
+  sort_date: number;
+  name: string;
+  provider: object;
+  vehicle: {
+    name: string;
+  }
+  pad: object;
+}
+
+function LaunchCarousel({ launches, handleSelect } : Props ) {
   const launchesMap = launches.map((launch) => {
 
-    let vehicleImage;
+    let vehicleImage = "";
 
     // Launch vehicle images
-    const vehicleImages = {
+    const vehicleImages : { [key: string] : string } = {
       "Falcon 9" : "https://flight-horizons.s3.us-west-2.amazonaws.com/falcon9.png",
       "Super Heavy / Starship Prototype" : "https://flight-horizons.s3.us-west-2.amazonaws.com/super_heavy.png",
       "Falcon Heavy" : "https://flight-horizons.s3.us-west-2.amazonaws.com/falcon_heavy.png",

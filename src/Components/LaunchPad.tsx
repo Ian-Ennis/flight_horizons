@@ -1,13 +1,29 @@
 import React from 'react';
 
-function LaunchPad({ launches, index }) {
+interface Props {
+  launches: EachPadLaunch[];
+  index: number;
+}
+
+interface EachPadLaunch {
+  pad: {
+    name: string;
+    location: {
+      name: string;
+      state: string,
+      country: string;
+    }
+  }
+}
+
+function LaunchPad({ launches, index } : Props) {
 
   let googleSatellite;
   let facilityWiki;
   let padImage;
 
   // Launch pad google satellite images, informational webpages, and pad photographs
-  const launchPads = {
+  const launchPads : { [index: string] : { google: string | null, wiki: string, img: string } } = {
     "SLC-4E": {
       google: "https://www.google.com/maps/place/34%C2%B037'55.2%22N+120%C2%B036'39.6%22W/@34.6326513,-120.6134089,3273m/data=!3m1!1e3!4m5!3m4!1s0x0:0x46c82463d6e51a3e!8m2!3d34.632!4d-120.611",
       wiki: "https://en.wikipedia.org/wiki/Vandenberg_Space_Launch_Complex_4",

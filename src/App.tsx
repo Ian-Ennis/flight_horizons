@@ -9,7 +9,7 @@ function App() {
   const initialLaunchData = {
     result: [
       {
-        sort_date: "",
+        sort_date: 0,
         name: "",
         provider: { name: "" },
         vehicle: { name: "" },
@@ -22,22 +22,33 @@ function App() {
             country: "",
           },
         },
+        launch_description: "",
       },
     ],
   };
 
-  interface EachLaunch {
-    sort_date: string;
-    name: string;
-    provider: object;
-    vehicle: object;
-    pad: object;
+  interface Launches {
+    result: EachLaunch[];
   }
 
-  interface Launches {
-    // count: number;
-    // valid_auth: boolean;
-    result: EachLaunch[];
+  interface EachLaunch {
+    sort_date: number;
+    name: string;
+    provider: {
+      name: string;
+    },
+    vehicle: {
+      name: string;
+    },
+    pad: {
+      name: string;
+      location: {
+        name: string;
+        state: string,
+        country: string;
+      }
+    },
+    launch_description: string;
   }
   
   // Launch data component state initially set to above placeholder data 

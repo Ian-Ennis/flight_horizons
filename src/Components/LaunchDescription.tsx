@@ -1,12 +1,25 @@
 import React from "react";
 
-function LaunchDescription({ launches, index }) {
+interface Props {
+  launches: EachDescriptionLaunch[];
+  index: number;
+}
+
+interface EachDescriptionLaunch {
+  name: string;
+  provider: {
+    name: string;
+  };
+  launch_description: string;
+}
+
+function LaunchDescription({ launches, index } : Props) {
 
   let providerWebsite;
   let missionWebsite;
 
   // Launch provider websites
-  const launchProviders = {
+  const launchProviders : { [key: string] : string } = {
     "ABL Space" : "https://ablspacesystems.com/",
     "Arianespace" : "https://www.arianespace.com/",
     "Firefly" : "https://firefly.com/",
@@ -25,7 +38,7 @@ function LaunchDescription({ launches, index }) {
   }
 
   // Mission information websites
-  const missions = {
+  const missions : { [key: string] : string } = {
     "Artemis" : "https://www.nasa.gov/specials/artemis/",
     "Starlink" : "https://www.starlink.com/",
     "Eutelsat Konnect" : "https://www.eutelsat.com/satellites/future-satellites.html",
