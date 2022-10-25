@@ -139,6 +139,11 @@ function LaunchPad({ launches, index } : Props) {
       wiki: "https://en.wikipedia.org/wiki/Cosmic_Girl_(aircraft)",
       img: "https://imgur.com/Xv8hnQj.png",
     },
+    "LP-101" : {
+      google: "https://www.google.com/maps/@19.6144659,110.9517656,2043m/data=!3m1!1e3",
+      wiki: "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
+      img: "https://imgur.com/IwYuN0q.png",
+    },
   };
 
   for (let key in launchPads) {
