@@ -63,7 +63,7 @@ function LaunchCarousel({ launches, handleSelect } : Props ) {
 
     return (
       <Carousel.Item key={uuidv4()}>
-        <p style={{ textAlign: "center", fontSize: 22, marginBottom: "20px"}}>
+        <p style={{ textAlign: "center", fontSize: 22, textShadow: "#ffb90069 0px 0px 12px, #ffb90069 0px 0px 12px", marginBottom: "20px"}}>
           {launchDay}, {launchMonth} {launchDate}, {launchTime} (MT)
         </p>
         <div id="vehicle_image_container">
