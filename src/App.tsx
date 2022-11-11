@@ -51,7 +51,7 @@ function App() {
     launch_description: string;
   }
   
-  // Launch data component state initially set to above placeholder data 
+  // Launch data component state initially set to above placeholder data  
   const [upcomingLaunches, setUpcomingLaunches] = useState<Launches>(initialLaunchData)
   // Animation component state to render initial <Entry /> component
   const [animate, setAnimate] = useState<boolean>(true);
@@ -81,7 +81,7 @@ function App() {
         setAnimate(false);
       }, 7500);
     } else {
-        setAnimate(false)
+      setAnimate(false)
     }
   });
 
