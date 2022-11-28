@@ -60,6 +60,7 @@ it("matches the snapshot", () => {
             "fontSize": 22,
             "marginBottom": "20px",
             "textAlign": "center",
+            "textShadow": "#ffb90069 0px 0px 12px, #ffb90069 0px 0px 12px",
           }
         }
       >
@@ -78,6 +79,7 @@ it("matches the snapshot", () => {
         <img
           alt="launch_vehicle"
           id="vehicle_image"
+          src=""
         />
       </div>
       <CarouselCaption>
