@@ -67,7 +67,7 @@ it("matches the snapshot", () => {
             class="active carousel-item"
           >
             <p
-              style="text-align: center; font-size: 22px; margin-bottom: 20px;"
+              style="text-align: center; font-size: 22px; text-shadow: #ffb90069 0px 0px 12px, #ffb90069 0px 0px 12px; margin-bottom: 20px;"
             >
               Invalid Date
               , 
@@ -84,6 +84,7 @@ it("matches the snapshot", () => {
               <img
                 alt="launch_vehicle"
                 id="vehicle_image"
+                src=""
               />
             </div>
             <div
