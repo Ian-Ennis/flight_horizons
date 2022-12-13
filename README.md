@@ -30,7 +30,7 @@
 
 
 ## Screenshots
-![Entry](https://flight-horizons.s3.us-west-2.amazonaws.com/entry_screenshot.png)
+![Entry](https://github.com/Ian-Ennis/flight_horizons/blob/main/public/Entry_Screenshot.png)
 
 ![Home](https://github.com/Ian-Ennis/flight_horizons/blob/main/public/Home_Screenshot.png)
 

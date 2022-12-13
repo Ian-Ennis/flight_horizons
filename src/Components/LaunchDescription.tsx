@@ -29,6 +29,7 @@ function LaunchDescription({ launches, index } : Props) {
     "Rocket Lab" : "https://www.rocketlabusa.com/",
     "SpaceX" : "https://www.spacex.com/",
     "United Launch Alliance (ULA)" : "https://www.ulalaunch.com/",
+    "LandSpace" : "https://en.wikipedia.org/wiki/LandSpace",
   }
 
   for (let key in launchProviders) {

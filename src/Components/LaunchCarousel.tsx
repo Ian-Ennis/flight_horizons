@@ -46,6 +46,7 @@ function LaunchCarousel({ launches, handleSelect } : Props ) {
       "LauncherOne" : "https://flight-horizons.s3.us-west-2.amazonaws.com/virgin_orbit_launcher_one.png",
       "Long March 5B" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Long_March_5B.png",
       "Long March 2F" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Long_March_2F.png",
+      "Zhuque-2" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Zhuque-2.png",
     }
 
     for (let key in vehicleImages) {
