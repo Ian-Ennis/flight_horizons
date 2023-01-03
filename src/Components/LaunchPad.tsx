@@ -144,6 +144,16 @@ function LaunchPad({ launches, index } : Props) {
       wiki: "https://en.wikipedia.org/wiki/Wenchang_Space_Launch_Site",
       img: "https://imgur.com/IwYuN0q.png",
     },
+    "LA-Y1" : {
+      google: "https://www.google.com/maps/place/Space+Museum,+Tanegashima+Space+Centre/@30.3749364,130.9564285,788m/data=!3m1!1e3!4m5!3m4!1s0x353cf2acbf51a1d9:0xe41d40b31890ec74!8m2!3d30.374865!4d130.9576461",
+      wiki: "https://en.wikipedia.org/wiki/Tanegashima_Space_Center",
+      img: "https://imgur.com/pGwFrNf.png",
+    },
+    "LA-Y2" : {
+      google: "https://www.google.com/maps/place/Space+Museum,+Tanegashima+Space+Centre/@30.3749364,130.9564285,788m/data=!3m1!1e3!4m5!3m4!1s0x353cf2acbf51a1d9:0xe41d40b31890ec74!8m2!3d30.374865!4d130.9576461",
+      wiki: "https://en.wikipedia.org/wiki/Tanegashima_Space_Center",
+      img: "https://imgur.com/pGwFrNf.png",
+    },
   };
 
   for (let key in launchPads) {
