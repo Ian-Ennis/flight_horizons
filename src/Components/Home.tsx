@@ -36,6 +36,12 @@ function Home({ launches } : LaunchesProps ) {
     setIndex(selectedIndex);
   }
 
+  const handleClick = (e: React.MouseEvent): void => {
+    e.preventDefault();
+
+    console.log('click to animation')
+  }
+
   return (
     <div data-testid="home_component">
       <div id="home_title_container">
@@ -43,6 +49,7 @@ function Home({ launches } : LaunchesProps ) {
           id="home_title"
           src="https://flight-horizons.s3.us-west-2.amazonaws.com/title.png"
           alt="flight_horizons_title"
+          onClick={handleClick}
         />
       </div>
 
