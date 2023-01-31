@@ -50,6 +50,8 @@ function LaunchCarousel({ launches, handleSelect } : Props ) {
       "H-2A" : "https://flight-horizons.s3.us-west-2.amazonaws.com/Jaxa_H-IIA.png",
       "H-3" : "https://flight-horizons.s3.us-west-2.amazonaws.com/JAXA_H-3.png",
       "Vulcan" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ULA_Vulcan.png",
+      "SSLV" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ISRO_PSLV.png",
+      "GSLV-II" : "https://flight-horizons.s3.us-west-2.amazonaws.com/ISRO_GSLV_II.png",
     }
 
     for (let key in vehicleImages) {
